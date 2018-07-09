@@ -11,5 +11,5 @@ Transaction Diagram
 | gasPrice  | Amount of ether the sender is willing to pay per unit gas to get this transaction processed  |
 | startGas/gasLimit  | Units of gas that this transaction can consume  |
 | v  | Cryptographic pieces of data that can be used to generate the senders account address. Generated from the sender's private key.  |
-| r  |
-| s  |
+| r  | Cryptographic pieces of data that can be used to generate the senders account address. Generated from the sender's private key.  |
+| s  | Cryptographic pieces of data that can be used to generate the senders account address. Generated from the sender's private key.  |

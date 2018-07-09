@@ -1,4 +1,4 @@
-# SolidityBasics
+# Solidity Basics
 A compilation of lessons I took to learn Solidity
 
 **Transaction Parameters**
@@ -24,3 +24,15 @@ A compilation of lessons I took to learn Solidity
 |  constant  |  This function returns data and does NOT modify the contract’s data  |
 |  pure  |  Function will not modify or even READ the contract’s data  |
 |  payable  |  When someone call this function they might send ether along  |
+
+**Common Function Types**
+Two ways to invoke a function that belongs to a contract
+
+|  'Calling' a Function  | Sending a Transaction to a Function  |
+| ------------- | ------------- |
+|  Cannot modify contract's data  |  Can modify a contract's data  |
+|  Can return data  |  Takes time to execute  |
+|  Runs instantly  |  Returns the transaction hash  |
+|  Free to do  |  Costs money  |
+
+Sending a Transaction to a Function will modify the data within the contract

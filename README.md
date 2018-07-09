@@ -25,10 +25,10 @@ A compilation of lessons I took to learn Solidity
 |  pure  |  Function will not modify or even READ the contract’s data  |
 |  payable  |  When someone call this function they might send ether along  |
 
-**Common Function Types**
+**Running Contract Functions**
 Two ways to invoke a function that belongs to a contract
 
-|  'Calling' a Function  | Sending a Transaction to a Function  |
+|  'Calling' a Function  | Sending a 'Transaction' to a Function  |
 | ------------- | ------------- |
 |  Cannot modify contract's data  |  Can modify a contract's data  |
 |  Can return data  |  Takes time to execute  |

@@ -1,5 +1,5 @@
 # Solidity Basics
-A compilation of lessons I took to learn Solidity
+A compilation of lessons I learned from @StephenGrider via Udemy
 
 **Transaction Parameters**
 

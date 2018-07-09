@@ -14,7 +14,7 @@ A compilation of lessons I took to learn Solidity
 | r  | Cryptographic pieces of data that can be used to generate the senders account address. Generated from the sender's private key.  |
 | s  | Cryptographic pieces of data that can be used to generate the senders account address. Generated from the sender's private key.  |
 
-**Common Function Types**
+**Common Function Types** 
 
 | Function Type  | Descriptions |
 | ------------- | ------------- |

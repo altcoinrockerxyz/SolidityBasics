@@ -15,3 +15,26 @@ const web3 = new Web3(ganache.provider());
 // Mocha: Is a test running framework for any type
 // of Javascript code that we want (i.e. front-end app, back-end app, even Eth)
 // Has a very small set of functions that we need to understand
+
+// test class
+class Car {
+  park() { // Method 1
+    return 'stopped';
+  }
+
+  drive() { // Method 2
+    return 'vroom';
+  }
+}
+
+// make a call on a descripe function first
+describe('Car', () => {
+  it('can park', () => { // where we write our actual test setup and assertion logic
+    // Step 1. Create an instance of class Car
+    const car = new Car();
+    // to make assertion use the assert library declared at the top
+    assert.equal(car.park(), 'stopped');
+  });
+}); // first argument string could be any name
+// and not necessary to be name of class
+// second argument is an array function

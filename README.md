@@ -59,6 +59,7 @@ Sending a Transaction to a Function will modify the data within the contract
 
 **Mocha Functions**
 *A shortlist of most commonly used functions*
+
 |  Function  | Purpose |
 | ------------- | ------------- |
 |  it  |  Run a test and make an assertion  |

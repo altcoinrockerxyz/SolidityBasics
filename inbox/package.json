@@ -9,6 +9,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "solc": "^0.4.24"
+    "solc": "^0.4.17"
   }
 }

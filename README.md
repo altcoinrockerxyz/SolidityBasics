@@ -1,6 +1,7 @@
 # Solidity Basics
 A compilation of lessons I learned from @StephenGrider via Udemy
 
+
 **Transaction Parameters**
 
 | Variables  | Descriptions |
@@ -14,6 +15,7 @@ A compilation of lessons I learned from @StephenGrider via Udemy
 | r  | Cryptographic pieces of data that can be used to generate the senders account address. Generated from the sender's private key.  |
 | s  | Cryptographic pieces of data that can be used to generate the senders account address. Generated from the sender's private key.  |
 
+
 **Common Function Types**
 
 | Function Type  | Descriptions |
@@ -24,6 +26,7 @@ A compilation of lessons I learned from @StephenGrider via Udemy
 |  constant  |  This function returns data and does NOT modify the contract’s data  |
 |  pure  |  Function will not modify or even READ the contract’s data  |
 |  payable  |  When someone call this function they might send ether along  |
+
 
 **Running Contract Functions**
 Two ways to invoke a function that belongs to a contract
@@ -44,3 +47,11 @@ Sending a Transaction to a Function will modify the data within the contract
 2. type language-solidity on the search box
 3. Click Packages (not Themes)
 4. Choose language-solidity and click Install
+
+
+**Web3 Versioning Issues**
+*Awareness will help save time*
+
+|  v0.x.x  | v1.x.x  |
+| ------------- | ------------- |
+|  "Primitive" interface - only callbacks for async code  |  Support for promises + async/await  |

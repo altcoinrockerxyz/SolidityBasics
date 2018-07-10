@@ -36,3 +36,11 @@ Two ways to invoke a function that belongs to a contract
 |  Free to do  |  Costs money  |
 
 Sending a Transaction to a Function will modify the data within the contract
+
+
+**Trick**
+*How to install Solidity text highlighting in Atom*
+1. go to Atom > Preferences > Install
+2. type language-solidity on the search box
+3. Click Packages (not Themes)
+4. Choose language-solidity and click Install

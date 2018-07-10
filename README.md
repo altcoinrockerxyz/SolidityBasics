@@ -43,8 +43,8 @@ Sending a Transaction to a Function will modify the data within the contract
 
 **Trick**
 *How to install Solidity text highlighting in Atom*
-1. go to Atom > Preferences > Install
-2. type language-solidity on the search box
+1. Go to Atom > Preferences > Install
+2. Type language-solidity on the search box
 3. Click Packages (not Themes)
 4. Choose language-solidity and click Install
 

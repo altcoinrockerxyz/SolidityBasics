@@ -55,3 +55,12 @@ Sending a Transaction to a Function will modify the data within the contract
 |  v0.x.x  | v1.x.x (version we are using) |
 | ------------- | ------------- |
 |  "Primitive" interface - only callbacks for async code  |  Support for promises + async/await syntax  |
+
+
+**Mocha Functions**
+*A shortlist of most commonly used functions*
+|  Function  | Purpose |
+| ------------- | ------------- |
+|  it  |  Run a test and make an assertion  |
+|  describe  |  Groups together 'it' functions  |
+|  beforeEach  |  Execute some general setup code  |

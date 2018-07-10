@@ -10,5 +10,6 @@ const source = fs.readFileSync(inboxPath, 'utf8'); // read in the contents of th
 
 // write the actual compile statement using Solidity compiler
 console.log(solc.compile(source, 1));
+solc.compile(source, 1);
 // pass in the source code and number of different contracts we are attempting to compile
 // wrap in console.log() to show what's happening behind the scene

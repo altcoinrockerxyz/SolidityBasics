@@ -65,3 +65,23 @@ Sending a Transaction to a Function will modify the data within the contract
 |  it  |  Run a test and make an assertion  |
 |  describe  |  Groups together 'it' functions  |
 |  beforeEach  |  Execute some general setup code  |
+
+
+
+
+**Understanding ABI Interface**
+
+*The ABI is how we get some intermediation/conversion/interface between the Solidity world and the JavaScript world. For this process to take place, the JSON file has to be parsed (via web3.eth.Contract constructor) and specify the need to interact with ABI aspect from all the contents of the JSON file i.e. web3.eth.Contact(JSON.parse(interface)). The ABI is the JavaScript object aspect of the whole JSON file.*
+
+**Notes on deploy function/method**
+*The deploy creates a transaction with two properties (the data or bytecode, and the arguments). It calls an object that can be deployed on the network.*
+
+**Notes on send function/method**
+*The actual sending to the network is managed by the send function*
+
+**Web3 Usage in Contracts**
+
+|  Goal  | ABI |  Bytecode  | Address of deployed contract |
+| ------------- | ------------- | ------------- | ------------- |
+|  Interact with deployed contract  |  /  |  X  |  /  |
+|  Create a contract  |  /  |  /  |  X  |

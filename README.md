@@ -85,3 +85,7 @@ Sending a Transaction to a Function will modify the data within the contract
 | ------------- | ------------- | ------------- | ------------- |
 |  Interact with deployed contract  |  /  |  X  |  /  |
 |  Create a contract  |  /  |  /  |  X  |
+
+**Lecture 49**
+
+*Deploying to Rinkeby Test Network via Infura Service* - a public API we can sign up for and gives us ability to gain access to a node that is hosted on the Rinkeby network by Infura.

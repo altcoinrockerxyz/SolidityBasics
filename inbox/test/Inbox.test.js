@@ -55,12 +55,21 @@ describe('Inbox', () => {
     // console.log(inbox);
   });
 
+  // test that targets the message method
   it('has a default message', async () => {
     // call a method on our inbox contract but not modify any data
     // assume it will return a promise -async-
-    const message = await inbox.methods.message().call();
+    const message = await inbox.methods.message().call(); // call transaction
     // we are calling message method, not setMessage
     // next step is to assert the value of the message
     assert.equal(message, 'Hi there!')
+  });
+
+  // test that targets the setMessage method
+  it('can change the message', async () => {
+    await inbox.methods.setMessage('bye').send({ from: accounts[0] });
+    // send a transaction, specify who is sending
+    const message = await inbox.methods.message().call();
+    assert.equal(message, 'bye');
   });
 });

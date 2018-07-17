@@ -89,3 +89,12 @@ Sending a Transaction to a Function will modify the data within the contract
 **Lecture 49**
 
 *Deploying to Rinkeby Test Network via Infura Service* - a public API we can sign up for and gives us ability to gain access to a node that is hosted on the Rinkeby network by Infura.
+
+- To deploy, type *node deploy.js* on terminal window.
+- Once it is deployed, a contract address will be shown.
+- Upon receiving the *contract address*, open *Remix* and make sure the Test solidity code created at the start of the lesson (with message and setMessage methods) is on the text editor.
+- Make sure the correct contract creator address is online via Metamask-Rinkeby
+- Set the *Environment* to *Injected Web3*
+- Check to see if Metamask address is the same one shown on the *Account* field right below *Environment*
+- Afterwards, paste the contract address on the "*At Address*" form field right below the Inbox header.
+- Click the *At Address* button to see the deployed instance of the contract as well as all available methods (two lines below it)

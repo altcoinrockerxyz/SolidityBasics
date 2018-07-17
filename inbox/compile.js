@@ -2,7 +2,7 @@ const path = require('path'); // standard required modules
 const fs = require('fs'); // standard required modules
 const solc = require('solc'); // require solidity compiler to run line 12
 
-
+// This is the path to the solidity code 
 const inboxPath = path.resolve(__dirname, 'contracts', 'inbox.sol'); // pass three portions of the path
 // this is so it works in either windows or unix-based systems
 

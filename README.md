@@ -98,3 +98,14 @@ Sending a Transaction to a Function will modify the data within the contract
 - Check to see if Metamask address is the same one shown on the *Account* field right below *Environment*
 - Afterwards, paste the contract address on the "*At Address*" form field right below the Inbox header.
 - Click the *At Address* button to see the deployed instance of the contract as well as all available methods (two lines below it)
+
+**The 'msg' Global Variable**
+
+*This 'msg' global variable is available both when we -send a transaction in- and when we do a Call*
+
+|  Property Name  | Description  |
+| ------------- | ------------- |
+|  msg.data  |  'Data' field from the call or transaction that invoked the current function  |
+|  msg.gas  |  Amount of gas the current function invocation has available  |
+|  msg.sender  |  Address of the account that started the current function invocation  |
+|  msg.value  |  Amount of ether (in wei) that was sent along with the function invocation  |

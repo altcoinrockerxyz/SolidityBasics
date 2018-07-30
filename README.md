@@ -109,3 +109,7 @@ Sending a Transaction to a Function will modify the data within the contract
 |  msg.gas  |  Amount of gas the current function invocation has available  |
 |  msg.sender  |  Address of the account that started the current function invocation  |
 |  msg.value  |  Amount of ether (in wei) that was sent along with the function invocation  |
+
+**Reference Types**
+
+*https://imgur.com/lB2RP1v*

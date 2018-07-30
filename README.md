@@ -112,4 +112,8 @@ Sending a Transaction to a Function will modify the data within the contract
 
 **Reference Types**
 
+<<<<<<< HEAD
 *https://imgur.com/lB2RP1v*
+=======
+*This 'msg' global variable is available both when we -send a transaction in- and when we do a Call*
+>>>>>>> e8f4b13f995e2a9a42a9dc4c50af28a8323c236e

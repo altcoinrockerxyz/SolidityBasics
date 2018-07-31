@@ -25,7 +25,7 @@ contract Lottery {
         require(msg.value > .01 ether);
 
         // My added code to make sure manager isn't allowed to join or win
-        require(msg.sender != manager);
+        // require(msg.sender != manager);
 
         // add its address to the players array
         players.push(msg.sender);
@@ -41,6 +41,7 @@ contract Lottery {
     function pickWinner() public restricted reset {
         uint index = random() % players.length; // index of the person going to win
         players[index].transfer(this.balance); // access the address of the winner via 'index' value
+        // players = new address[](0);
     }
 
     // how to cancel lottery and return funds to contributor

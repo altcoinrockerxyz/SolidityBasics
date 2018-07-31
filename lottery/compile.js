@@ -2,11 +2,11 @@ const path = require('path'); // standard required modules
 const fs = require('fs'); // standard required modules
 const solc = require('solc'); // require solidity compiler to run line 12
 
-// This is the path to the solidity code 
-const inboxPath = path.resolve(__dirname, 'contracts', 'inbox.sol'); // pass three portions of the path
+// This is the path to the solidity code
+const lotteryPath = path.resolve(__dirname, 'contracts', 'Lottery.sol'); // pass three portions of the path
 // this is so it works in either windows or unix-based systems
 
-const source = fs.readFileSync(inboxPath, 'utf8'); // read in the contents of the file
+const source = fs.readFileSync(lotteryPath, 'utf8'); // read in the contents of the file
 
 // write the actual compile statement using Solidity compiler
 // console.log(solc.compile(source, 1));
@@ -17,5 +17,5 @@ const source = fs.readFileSync(inboxPath, 'utf8'); // read in the contents of th
 // whenever we compile, make sure it could be accessed by other files
 // immediately get access to compiled source code
 // we only need to pull out the Inbox property
-module.exports = solc.compile(source, 1).contracts[':Inbox'];
+module.exports = solc.compile(source, 1).contracts[':Lottery'];
 // this gives direct access to just the bytecode and interface property

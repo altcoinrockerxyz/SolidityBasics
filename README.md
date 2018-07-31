@@ -116,3 +116,7 @@ Sending a Transaction to a Function will modify the data within the contract
 
 
 **Lecture 67:** Remix Debugger https://imgur.com/td9C2zt
+
+**Lecture 73: Function Modifiers**
+
+*A means to reduce the amount of written code*

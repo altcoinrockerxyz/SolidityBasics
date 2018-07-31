@@ -29,7 +29,8 @@ const deploy = async () => {
 
   const result = await new web3.eth.Contract(JSON.parse(interface))
   // no need to send initial arguments so delete - , arguments: ['Hi there!']
-    .deploy({ data: '0x' + bytecode }) // going to contain contract's bytecode and any initial arguments
+    // .deploy({ data: '0x' + bytecode }) // going to contain contract's bytecode and any initial arguments
+    .deploy({ data: bytecode })
     .send({ gas: '1000000', from: accounts[0] });
 
   // check the address where the contract got deployed to

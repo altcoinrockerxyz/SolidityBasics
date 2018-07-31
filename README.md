@@ -120,3 +120,7 @@ Sending a Transaction to a Function will modify the data within the contract
 **Lecture 73: Function Modifiers**
 
 *A means to reduce the amount of written code*
+
+**Lecture 73: Permission Denied Error 126**
+
+If faced with this error, delete "node_modules" folder and run "npm install" within the work directory.

@@ -165,4 +165,4 @@ Objective: Install web3 v.1.0.0 and hijack the Provider from Metamask (using web
 
 - ABI (Interface or communication/translation layer from the Blockchain to the JavaScript world)
 - Get the contract ABI and feed it to the web3 interface (local copy of the contract)
-- To deploy the project, run "node deploy.js" from within the work directory (not the react directory)
+- To deploy the project, run "node deploy.js" from within the work directory (not the react directory) https://imgur.com/ZRt6UaX

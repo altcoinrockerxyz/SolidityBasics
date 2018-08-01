@@ -33,10 +33,8 @@ class App extends Component {
     const balance = await web3.eth.getBalance(lottery.options.address); // total amount raised
     // const balance is an object, not a number
 
-    const lastWinner = await lottery.methods.lastWinner().call(); // initialize
-
     // set a state for the property called manager
-    this.setState({ manager, players, balance, lastWinner });
+    this.setState({ manager, balance, players });
   }
 
   // event handler using babble upgrade
@@ -71,6 +69,10 @@ class App extends Component {
       // who is sending in the transaction (source account)
       from: accounts[0]
     });
+
+    const lastWinner = await lottery.methods.lastWinner().call(); // initialize
+
+    this.setState({ lastWinner });
 
     this.setState({
       // find a way to show the winning entry

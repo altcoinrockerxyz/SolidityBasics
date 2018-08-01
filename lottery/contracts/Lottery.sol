@@ -41,7 +41,6 @@ contract Lottery {
     function pickWinner() public restricted reset {
         uint index = random() % players.length; // index of the person going to win
         players[index].transfer(this.balance); // access the address of the winner via 'index' value
-        // players = new address[](0);
         lastWinner = players[index]; // records who won previously
     }
 

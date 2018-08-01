@@ -157,5 +157,12 @@ Installing Web3 library is an absolute core pinnacle thing of every ethereum app
 
 Objective: Install web3 v.1.0.0 and hijack the Provider from Metamask (using web3 v0.2) and use it for our web3 v1.0 instance.
 
-Steps
-Create web3.js within src directory
+**Lecture 89**
+*Create web3.js within src directory and add codes to App.js*
+
+**Lecture 90**
+*Taking the lottery contract and get it to work with our React application.*
+
+- ABI (Interface or communication/translation layer from the Blockchain to the JavaScript world)
+- Get the contract ABI and feed it to the web3 interface (local copy of the contract)
+- To deploy the project, run "node deploy.js" from within the work directory (not the react directory)

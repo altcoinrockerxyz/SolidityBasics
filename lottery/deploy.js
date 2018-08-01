@@ -33,8 +33,11 @@ const deploy = async () => {
     .deploy({ data: bytecode })
     .send({ gas: '1000000', from: accounts[0] });
 
-  // check the address where the contract got deployed to
+  // check the address where the contract got deployed to via browser console log
   console.log('Contract deployed to', result.options.address);
+
+  // access the interface via console
+  console.log(interface);
 };
 
 deploy();

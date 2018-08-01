@@ -156,3 +156,6 @@ Browser view on initial load: https://imgur.com/pS5NeD7
 Installing Web3 library is an absolute core pinnacle thing of every ethereum application that's to be put together
 
 Objective: Install web3 v.1.0.0 and hijack the Provider from Metamask (using web3 v0.2) and use it for our web3 v1.0 instance.
+
+Steps
+Create web3.js within src directory

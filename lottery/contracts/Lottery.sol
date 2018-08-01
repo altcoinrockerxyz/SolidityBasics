@@ -13,9 +13,6 @@ contract Lottery {
     uint256[] private amount;
 
     function Lottery() public { // create the constructor function
-        // automatically get address of the person
-        // who is creating this contract
-        // we need to invoke a global variable  ('msg' object)
         manager = msg.sender; // always available inside of our functions,
     }
 

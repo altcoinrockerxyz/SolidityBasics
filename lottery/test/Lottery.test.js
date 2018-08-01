@@ -62,6 +62,58 @@ describe('Lottery Contract', () => {
 
   });  // end it
 
+  // ERROR CATCHER ROUTINE - Try-Catch
+  it('requires a minimum amount of ether to enter', async () => {
+    try {
+      await lottery.methods.enter().send ({
+        from: accounts[0],
+        value: 200,
+        gas: '1000000'
+    });
+
+    // failing assertion immediately after the await
+    assert(false);
+
+    } catch (err) {
+      // add an assertion
+      assert(err);
+    }
+
+  });
+
+  it('only manager can call pickWinner', async () => {
+    try {
+      await lottery.methods.pickWinner().send({
+        from: accounts[1],
+        value: 200,
+        gas: '1000000'
+      });
+      assert(false);
+    } catch (err) {
+      assert(err);
+    }
+  });
+
+  // test with one player
+  it('sends money to the winner and resets the players array', async () => {
+    await lottery.methods.enter().send({
+      from: accounts[0],
+      value: web3.utils.toWei('2', 'ether'),
+      gas: '1000000'
+    });
+
+    const initialBalance = await web3.eth.getBalance(accounts[0]);
+    await lottery.methods.pickWinner().send({ from: accounts[0] }); // attempt to pick a winner
+    const finalBalance = await web3.eth.getBalance(accounts[0]);
+    const difference = finalBalance - initialBalance;
+
+    // how to know amount of gas, do a console.console.log();
+    // console.log(finalBalance - initialBalance);
+
+    // allow for some amount of gas cost
+    assert(difference > web3.utils.toWei('1.8', 'ether'));
+  });
+
 }); // end describe
 
 // Second Test attempt to enter an address into the lottery

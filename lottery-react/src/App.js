@@ -10,11 +10,6 @@ import lottery from "./lottery";
 
 // this is what renders the contract call to the screen
 class App extends Component {
-  /**  constructor(props) {
-    super(props);
-
-    this.state = { manager: "" }; // initial state of manager is empty
-  } **/
   // state runs entirely on constructor REFACTORED
   state = {
     manager: "",
@@ -34,17 +29,14 @@ class App extends Component {
     // const balance is an object, not a number
 
     // set a state for the property called manager
-    this.setState({ manager, balance, players });
+    this.setState({ manager, players, balance });
   }
 
   // event handler using babble upgrade
   onSubmit = async event => {
     event.preventDefault(); // value is automatically be set to be equal to our component
 
-    // write a code to send a transaction (async)
-
     // list the account we are going to use
-    // before calling directly the contract send
     const accounts = await web3.eth.getAccounts();
 
     // a short message while waiting for transaction to push through
@@ -81,10 +73,6 @@ class App extends Component {
   };
 
   render() {
-    // console.log(web3.version); // shows version on browser console
-    // web3.eth.getAccounts() // print out a list of all the accounts tied to this instance of web3
-    //  .then(console.log); // anything the getAccounts retrieved will be passed into the console
-
     return (
       <div>
         <h2>Lottery Contract</h2>
@@ -117,18 +105,6 @@ class App extends Component {
 
         <h1>{this.state.message}</h1>
       </div>
-
-      /** replace by what we need for the lottery contract
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-      **/
     );
   }
 }

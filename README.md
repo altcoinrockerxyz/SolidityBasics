@@ -124,3 +124,19 @@ Sending a Transaction to a Function will modify the data within the contract
 **Lecture 73: Permission Denied Error 126**
 
 If faced with this error, delete "node_modules" folder and run "npm install" within the work directory.
+
+**Lecture 85: Ethereum App Architecture (intro to React)**
+
+Whenever an application submits data, it doesn't get processed by the Server, rather it goes straight to the Ethereum Network (via a transaction processor such as Metamask using web3 interface) and from there it gets accessed by the Server to be sent back to the UX.
+
+All the codes that are needed to run, are processed inside the client's browser window - rather than at the server-side.
+
+React makes development way easier than just using Vanilla.
+
+**Lecture 86: Application Overview**
+
+To install React on OS X, run "sudo npm install -g create-react-app"
+
+Objective front-end and descriptions: Generate a new react project - https://imgur.com/RYsSk3T
+
+To create a react app, run "create-react-app lotter-react"

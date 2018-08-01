@@ -187,3 +187,8 @@ ES2016 helps refactor some codes to be a little more succint (i.e. the construct
 **Lecture 94: Accessing More Properties**
 Show number of players who entered the game
 Show how much is total fund raised for lottery
+
+**Lecture 95: The Enter Form**
+
+_Reminder_
+set the this.state.value parameter

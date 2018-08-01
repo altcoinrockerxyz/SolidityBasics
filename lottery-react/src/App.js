@@ -19,7 +19,8 @@ class App extends Component {
   state = {
     manager: "",
     players: [],
-    balance: ""
+    balance: "",
+    value: ""
   };
 
   async componentDidMount() {
@@ -46,6 +47,20 @@ class App extends Component {
           {this.state.players.length} people entered, competing to win{" "}
           {web3.utils.fromWei(this.state.balance, "ether")} ethers!
         </p>
+
+        <hr />
+
+        <form>
+          <h4>Want to try your luck?</h4>
+          <div>
+            <label>Amount of ether to enter</label>
+            <input
+              value={this.state.value}
+              onChange={event => this.setState({ value: event.target.value })}
+            />
+          </div>
+          <button>Enter</button>
+        </form>
       </div>
 
       /** replace by what we need for the lottery contract

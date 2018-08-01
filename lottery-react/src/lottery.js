@@ -1,7 +1,7 @@
 import web3 from "./web3";
 
 // copy-paste the address and the ABI at the Terminal
-const address = "0xD5d125104d52BC5d0d06C2c28Ea80CC27BEb3248";
+const address = "0xc1e747446465157F1B5869964eb2B41167D9D833";
 
 // prettier
 const abi = [
@@ -54,6 +54,15 @@ const abi = [
     constant: true,
     inputs: [{ name: "", type: "uint256" }],
     name: "players",
+    outputs: [{ name: "", type: "address" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "lastWinner",
     outputs: [{ name: "", type: "address" }],
     payable: false,
     stateMutability: "view",

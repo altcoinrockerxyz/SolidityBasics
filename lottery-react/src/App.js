@@ -18,11 +18,11 @@ class App extends Component {
   // state runs entirely on constructor REFACTORED
   state = {
     manager: "",
+    lastWinner: "",
     players: [],
     balance: "",
     value: "",
     message: ""
-    // winner: ""
   };
 
   async componentDidMount() {
@@ -33,10 +33,10 @@ class App extends Component {
     const balance = await web3.eth.getBalance(lottery.options.address); // total amount raised
     // const balance is an object, not a number
 
-    // const winner = await lottery.methods.getLastWinner().call();
+    const lastWinner = await lottery.methods.lastWinner().call(); // initialize
 
     // set a state for the property called manager
-    this.setState({ manager, players, balance });
+    this.setState({ manager, players, balance, lastWinner });
   }
 
   // event handler using babble upgrade
@@ -74,8 +74,7 @@ class App extends Component {
 
     this.setState({
       // find a way to show the winning entry
-      // message: this.state.winner,
-      message: " <- won this round!"
+      message: this.state.lastWinner + " <- won this round!"
     });
   };
 

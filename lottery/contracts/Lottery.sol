@@ -4,6 +4,7 @@ contract Lottery {
     // define the different variables
     address public manager; // public visibility so other devs
     // (front end JS app from this contract) could easily access it
+    address public lastWinner;
 
     // initialize the players variable (an array of addresses)
     // function copied from https://ethfiddle.com/zETJQ8KNtC
@@ -12,7 +13,7 @@ contract Lottery {
     // stores values of ethers sent by each contributor
     uint256[] private amount;
 
-    address public lastWinner;
+
 
     function Lottery() public { // create the constructor function
         manager = msg.sender; // always available inside of our functions,
@@ -69,8 +70,4 @@ contract Lottery {
         return players;
     }
 
-    // show last winner
-    function getLastWinner() public view returns (address) {
-        return lastWinner;
-    }
 }

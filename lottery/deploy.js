@@ -10,6 +10,22 @@ const provider = new HDWalletProvider(
   'https://rinkeby.infura.io/ENUDqoAlex8AczP7XlXW'
 );
 
+
+/**
+
+DEPLOYMENT PROBLEMS such as
+
+Error: Cannot find module 'ethereumjs-wallet/hdkey'
+
+npm uninstall ethereumjs-wallet
+npm uninstall truffle-hdwallet-provider
+npm install --save ethereumjs-wallet@0.6.0
+npm install --save truffle-hdwallet-provider@0.0.3
+
+
+**/
+
+
 // this will take our provider,
 // pass to our Web3 constructor
 // so we get an instance of web3
@@ -30,14 +46,16 @@ const deploy = async () => {
   const result = await new web3.eth.Contract(JSON.parse(interface))
   // no need to send initial arguments so delete - , arguments: ['Hi there!']
     // .deploy({ data: '0x' + bytecode }) // going to contain contract's bytecode and any initial arguments
-    .deploy({ data: bytecode })
+    .deploy({ data: '0x' + bytecode })
     .send({ gas: '1000000', from: accounts[0] });
+
+  // access the interface via console
+  console.log(interface);
 
   // check the address where the contract got deployed to via browser console log
   console.log('Contract deployed to', result.options.address);
 
-  // access the interface via console
-  console.log(interface);
+
 };
 
 deploy();

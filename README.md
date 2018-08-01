@@ -139,7 +139,7 @@ To install React on OS X, run "sudo npm install -g create-react-app"
 
 Objective front-end and descriptions: Generate a new react project - https://imgur.com/RYsSk3T
 
-To create a react app, run "create-react-app lotter-react"
+To create a react app, run "create-react-app lottery-react"
 
 To start, run "npm run start" while inside the react app directory
 
@@ -166,3 +166,8 @@ Objective: Install web3 v.1.0.0 and hijack the Provider from Metamask (using web
 - ABI (Interface or communication/translation layer from the Blockchain to the JavaScript world)
 - Get the contract ABI and feed it to the web3 interface (local copy of the contract)
 - To deploy the project, run "node deploy.js" from within the work directory (not the react directory) https://imgur.com/ZRt6UaX
+- If the ff deployment error is encountered, check this link -> https://stackoverflow.com/questions/50201353/unhandledpromiserejectionwarning-error-the-contract-code-couldnt-be-stored-p
+*UnhandledPromiseRejectionWarning: Error: The contract code couldn't be stored, please check your gas limit*  This could be due to hdwallet provider Version https://imgur.com/nXW1y8v
+
+npm uninstall truffle-hdwallet-provider
+npm install --save truffle-hdwallet-provider@0.0.3

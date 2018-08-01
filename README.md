@@ -140,3 +140,19 @@ To install React on OS X, run "sudo npm install -g create-react-app"
 Objective front-end and descriptions: Generate a new react project - https://imgur.com/RYsSk3T
 
 To create a react app, run "create-react-app lotter-react"
+
+To start, run "npm run start" while inside the react app directory
+
+After a moment or two, it will open a browser tab at localhost:3000
+
+Terminal view once compiled: https://imgur.com/O6zsF7l
+
+Browser view on initial load: https://imgur.com/pS5NeD7
+
+**Lecture 88: Multiple Web3 Instances**
+
+*Installing Web3 Library*
+
+Installing Web3 library is an absolute core pinnacle thing of every ethereum application that's to be put together
+
+Objective: Install web3 v.1.0.0 and hijack the Provider from Metamask (using web3 v0.2) and use it for our web3 v1.0 instance.

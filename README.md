@@ -172,3 +172,18 @@ _Contract Address of Deployed Lottery via Rinkeby: 0xD5d125104d52BC5d0d06C2c28Ea
 - Make a new file within src directory (lottery.js)
 - Import web3 Instance (copy the address of deployed contract and ABI into lottery.js)
 - Create a local contract instance (copy of the rinkeby-deployed contract)
+
+**Lecture 92: Rendering Contract Data**
+
+_Follows the same sequence of actions_
+
+In order to get any info off of our contract and render it on the screen or component, we'll always gonna follow the same sequence of actions as shown here ->
+https://imgur.com/O551qPZ
+
+**Lecture 93: Instance Properties**
+_ECMA Script ES 2016 change_
+ES2016 helps refactor some codes to be a little more succint (i.e. the constructor of App class)
+
+**Lecture 94: Accessing More Properties**
+Show number of players who entered the game
+Show how much is total fund raised for lottery

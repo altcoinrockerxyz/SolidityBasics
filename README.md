@@ -192,3 +192,6 @@ Show how much is total fund raised for lottery
 
 _Reminder_
 set the this.state.value parameter
+
+**Lecture 86: Form Setup**
+Capture what is submitted

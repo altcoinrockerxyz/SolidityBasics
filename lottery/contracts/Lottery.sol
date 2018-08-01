@@ -12,6 +12,8 @@ contract Lottery {
     // stores values of ethers sent by each contributor
     uint256[] private amount;
 
+    address public lastWinner;
+
     function Lottery() public { // create the constructor function
         manager = msg.sender; // always available inside of our functions,
     }
@@ -39,6 +41,7 @@ contract Lottery {
         uint index = random() % players.length; // index of the person going to win
         players[index].transfer(this.balance); // access the address of the winner via 'index' value
         // players = new address[](0);
+        lastWinner = players[index]; // records who won previously
     }
 
     // how to cancel lottery and return funds to contributor
@@ -64,5 +67,10 @@ contract Lottery {
     // list all contributors (could be used by web apps)
     function getPlayers() public view returns (address[]) { // everyone can see but cannot modify
         return players;
+    }
+
+    // show last winner
+    function getLastWinner() public view returns (address) {
+        return lastWinner;
     }
 }

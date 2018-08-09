@@ -209,3 +209,7 @@ https://imgur.com/V5oZIIF
 **Lecture 103: Campaign Constructor**
 
 This will contain the two initial variables -- the manager, and the minimumContribution. It initializes the contract by assigning the contract deployer as the manager (since the contract could be used by various fundraisers who will end up becoming the managers of each initialized campaign contracts).
+
+**Lecture 104: Contributing to the campaign**
+
+This will setup the approvers variable and the Contribute function

@@ -210,6 +210,8 @@ https://imgur.com/V5oZIIF
 
 This will contain the two initial variables -- the manager, and the minimumContribution. It initializes the contract by assigning the contract deployer as the manager (since the contract could be used by various fundraisers who will end up becoming the managers of each initialized campaign contracts).
 
-**Lecture 104: Contributing to the campaign**
+**Lecture 104: Contributing to the Campaign**
 
-This will setup the approvers variable and the Contribute function
+This will setup the approvers variable and the contribute function. It will initially declare an array of type address where contributors (approvers) will be stored. It will also have a checker (require) that will validate if the sent fund is greater than or equal to the minimumContribution.
+
+_The contribute function has to have the payable attribute in order for it to be able to accept sent funds_

@@ -215,3 +215,11 @@ This will contain the two initial variables -- the manager, and the minimumContr
 This will setup the approvers variable and the contribute function. It will initially declare an array of type address where contributors (approvers) will be stored. It will also have a checker (require) that will validate if the sent fund is greater than or equal to the minimumContribution.
 
 _The contribute function has to have the payable attribute in order for it to be able to accept sent funds_
+
+**Lecture 105: Running Quick Test**
+
+On Remix, go to Run tab and choose JavaScript VM Environment and then find the contract selector box to create an instance (deployment) of the contract. Make sure to be provide a minimumContribution value that will be required whenever an approver decides to contribute -- the lecture settings is 100 Wei.
+
+Deployment Screenshot: https://imgur.com/gpriixq
+
+_Notes: Upon initial depoyment, make sure to input the minimumContribution wei value on the variable beside the Deploy button, instead of the Value form field; When contributing, however, input the amount of Wei on the Value form field before pressing the Contribute button_

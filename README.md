@@ -161,8 +161,10 @@ _Taking the lottery contract and get it to work with our React application._
 - If the ff deployment error is encountered, check this link -> https://stackoverflow.com/questions/50201353/unhandledpromiserejectionwarning-error-the-contract-code-couldnt-be-stored-p
   _UnhandledPromiseRejectionWarning: Error: The contract code couldn't be stored, please check your gas limit_ This could be due to hdwallet provider Version https://imgur.com/nXW1y8v
 
-npm uninstall truffle-hdwallet-provider
-npm install --save truffle-hdwallet-provider@0.0.3
+  npm uninstall ethereumjs-wallet
+  npm uninstall truffle-hdwallet-provider
+  npm install --save ethereumjs-wallet@0.6.0
+  npm install --save truffle-hdwallet-provider@0.0.3
 
 **Lecture 91: Local Contract Instances**
 

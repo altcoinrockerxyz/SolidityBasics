@@ -197,3 +197,11 @@ set the this.state.value parameter
 
 **Lecture 86: Form Setup**
 Capture what is submitted
+
+**Lecture 102: Crowdfunding Contract Design**
+
+The objective of this contract is to set some security measures as to how funds are spent after the project manager (solicitor) receives them. To do this, contributors are given a chance to vote whenever fund use is requested (to be used to pay for some product development milestones).
+
+_Variables and Functions_
+
+https://imgur.com/V5oZIIF

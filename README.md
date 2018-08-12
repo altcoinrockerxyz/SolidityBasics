@@ -223,3 +223,11 @@ On Remix, go to Run tab and choose JavaScript VM Environment and then find the c
 Deployment Screenshot: https://imgur.com/gpriixq
 
 _Notes: Upon initial depoyment, make sure to input the minimumContribution wei value on the variable beside the Deploy button, instead of the Value form field; When contributing, however, input the amount of Wei on the Value form field before pressing the Contribute button_
+
+**Lecture 106: The Request Struct**
+
+This focuses on implementing the idea of a Spending Request. This requires the creation of a createRequest function and initialization of the requests variable.
+
+Review of Reference Types: https://imgur.com/pkMlrPu
+
+Request Struct Diagram: https://imgur.com/Ir2mfd2

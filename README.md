@@ -238,3 +238,7 @@ _Create additional function modifier to lock down access_
 
 Only the manager should be able to call the createRequest function, so it has to be restricted.
 For this to work, a restricted() modifier is created.
+
+**Lecture 108: Creating Struct Instances**
+
+Start work on createRequest() function and create a new request with key value pairs (description, value, recipient, boolean)

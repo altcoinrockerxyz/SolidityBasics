@@ -266,9 +266,11 @@ https://imgur.com/3E1zsoL
 
 _storage keyword_ changes the way in which the new variable works -- it makes the new variable point directly to the exact same location where the numbers variable (right side of the equation) is pointing at.
 
-Screenshots: https://imgur.com/jd7hgKi
+Screenshot: https://imgur.com/jd7hgKi
 
 _memory keyword_ will require some additional steps
 
 - If used, we will copy the values from the Storaged variable and store them on Memory.
 - This meant modifications on values at the Memory location will not affect values on the Storage location.
+
+Screenshot: https://imgur.com/AYGO71J

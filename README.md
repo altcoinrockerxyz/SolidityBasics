@@ -242,3 +242,11 @@ For this to work, a restricted() modifier is created.
 **Lecture 108: Creating Struct Instances**
 
 Start work on createRequest() function and create a new request with key value pairs (description, value, recipient, boolean)
+
+**Lecture 109: Instance Creation Syntax**
+
+_Breaking down the initialized Request struct_
+
+- Get ready to create a new variable that will contain a 'Request'
+- The variable's name is 'newRequest'
+- equal to Request({}) <-- Create a new instance of a Request and store the values from the left side of the equation

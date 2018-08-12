@@ -277,3 +277,12 @@ Screenshots:
 https://imgur.com/AYGO71J
 https://imgur.com/ynOR0Iu
 https://imgur.com/uWIphKl
+
+**Lecture 112: Voting System Requirements**
+
+_Moving on to approveRequest() function_
+
+Two Requirements:
+
+1.  Make sure a single contributor cannot vote multiple times on any spending request
+2.  Make sure that whatever voting system we come out with, it should be resilient for many many different contributors/approvers of the campaign (i.e. hundreds or thousands of approvers)

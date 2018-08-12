@@ -273,4 +273,7 @@ _memory keyword_ will require some additional steps
 - If used, we will copy the values from the Storaged variable and store them on Memory.
 - This meant modifications on values at the Memory location will not affect values on the Storage location.
 
-Screenshot: https://imgur.com/AYGO71J
+Screenshots:
+https://imgur.com/AYGO71J
+https://imgur.com/ynOR0Iu
+https://imgur.com/uWIphKl

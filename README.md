@@ -231,3 +231,10 @@ This focuses on implementing the idea of a Spending Request. This requires the c
 Review of Reference Types: https://imgur.com/pkMlrPu
 
 Request Struct Diagram: https://imgur.com/Ir2mfd2
+
+**Lecture 107: CreateRequest Function**
+
+_Create additional function modifier to lock down access_
+
+Only the manager should be able to call the createRequest function, so it has to be restricted.
+For this to work, a restricted() modifier is created.

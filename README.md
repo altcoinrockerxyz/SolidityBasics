@@ -250,3 +250,25 @@ _Breaking down the initialized Request struct_
 - Get ready to create a new variable that will contain a 'Request'
 - The variable's name is 'newRequest'
 - equal to Request({}) <-- Create a new instance of a Request and store the values from the left side of the equation
+
+**Lecture 110: Storage and Memory**
+
+_Two separate topics in Solidity_
+
+- Sometimes references where our contract stores Data
+- Sometimes references how our solidity variables store values
+
+Screenshots:
+https://imgur.com/azVCOQC
+https://imgur.com/3E1zsoL
+
+**Lecture 111: How Solidity Variables Reference Values**
+
+_storage keyword_ changes the way in which the new variable works -- it makes the new variable point directly to the exact same location where the numbers variable (right side of the equation) is pointing at.
+
+Screenshots: https://imgur.com/jd7hgKi
+
+_memory keyword_ will require some additional steps
+
+- If used, we will copy the values from the Storaged variable and store them on Memory.
+- This meant modifications on values at the Memory location will not affect values on the Storage location.

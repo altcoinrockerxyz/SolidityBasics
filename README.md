@@ -362,3 +362,13 @@ We'll know whether or not someone has donated to our campaign by looking up thei
 An _approvals mapping_ will also be added to the Request Struct - a mapping that tracks who has voted on a particular request.
 
 To track whether or not it's a YES or NO, a separate counter (approvalCount) that counts the number of people that said YES.
+
+MY NOTE: Addresses of contributors ARE NOT stored on a database of entries created from the contract. The VALUES are the ones stored (BOOL T or F), and for some unknown reason (for now), they are mapped to the actual addresses used.
+
+**Lecture 117: Refactoring to Mappings**
+
+Replace codes that use arrays by codes that use mappings by modifying lines 19-20, and line 38.
+
+https://imgur.com/Ie3ZN0h
+https://imgur.com/57pKwhg
+https://imgur.com/E1DiCmK

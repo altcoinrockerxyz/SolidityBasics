@@ -286,3 +286,11 @@ Two Requirements:
 
 1.  Make sure a single contributor cannot vote multiple times on any spending request
 2.  Make sure that whatever voting system we come out with, it should be resilient for many many different contributors/approvers of the campaign (i.e. hundreds or thousands of approvers)
+
+**Lecture 113: The Wrong Voting System (GOTCHA)**
+
+_The Wrong Way of Creating a Voting System_
+
+In order to know wrongly designed way to avoid such pitfall, because it's a very bad approach inside a Solidity contract
+
+One function with two subroutines was presented - approveRequest(). It contains a for loop that checks if isApprover = true, and another for loop to check if isApprover has not voted yet.

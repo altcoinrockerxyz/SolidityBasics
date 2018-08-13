@@ -379,3 +379,9 @@ _Update the request struct by adding the mapping called approvals and the approv
 
 uint approvalCount;
 mapping(address => bool) approvals; <- a better identifier (instead of approvals) could be used. approvers cannot be used bec it's already used on another mapping
+
+**Lecture 119: More on Struct Initialization**
+
+1.  Only VALUE TYPES are required to be initialized. Mappings are REFERENCE TYPES so they are not required to be initialized.
+
+2.  approvalCount number exists because we need to record the minimum number of approvers who voted YES.

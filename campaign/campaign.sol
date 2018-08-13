@@ -8,6 +8,8 @@ contract Campaign {
         uint value;
         address recipient;
         bool complete;
+        uint approvalCount; // keeps track of the YES votes
+        mapping(address => bool) approvals; // the ones who are allowed to approve
     }
 
     // define a new Request array of type requests
@@ -47,13 +49,19 @@ contract Campaign {
     function createRequest(string description, uint value, address recipient)
         public restricted
     {
+
         // use arguments to create a brand new request object
         Request memory newRequest = Request({ // use memory keyword
            // place a collection of key value pairs and set the value
            description: description,
            value: value,
            recipient: recipient,
-           complete: false
+           complete: false,
+           approvalCount: 0
+
+          // approvals mapping is not initialized because
+          // only the value types are required to be initialized
+          // a mapping is a reference type
         });
 
         // an alternative syntax for line 46 to 52

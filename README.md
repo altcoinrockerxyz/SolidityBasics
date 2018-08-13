@@ -372,3 +372,10 @@ Replace codes that use arrays by codes that use mappings by modifying lines 19-2
 https://imgur.com/Ie3ZN0h
 https://imgur.com/57pKwhg
 https://imgur.com/E1DiCmK
+
+**Lecture 118: Refactoring Request Structs**
+
+_Update the request struct by adding the mapping called approvals and the approvalCount._
+
+uint approvalCount;
+mapping(address => bool) approvals; <- a better identifier (instead of approvals) could be used. approvers cannot be used bec it's already used on another mapping

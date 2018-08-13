@@ -323,3 +323,42 @@ It all comes down to the search time for each of these data structures.
 Linear Time - For every additional record that we add to the array, it will take a slightly larger amount of time; the size of array dictates how long the search is going to take.
 
 Constant Time - No matter how many pieces of data we are storing inside the mapping, it's always gonna take the exact same amount of time to execute the search. It doesn't matter how many people enter into our contract, the time required to query for one entry will always be constant (i.e. 1sec for 1 contributor, 10 contributors, 10,000 contributors).
+
+**Lecture 116: Basics of Mappings**
+
+key: value
+
+_Example JavaScript Code for Key-Value Pairs_
+
+const spanishNumbers = {
+one: 'uno',
+two: 'dos',
+three: 'tres'
+};
+
+_Sample Methods to Manipulate the Object (SpanishColors)_
+
+Object.keys(spanishNumbers); <- This will show all the keys that the object hash
+Object.values(spanishNumbers); <- Spits out all the values of all the keys
+spanishNumbers["one"]; <-- returns the value at the specified key
+If the key doesn't exist, then the value will be 'undefined'
+spanishNumbers["afw34l"] === undefined; <-- this will result to true
+
+_With mappings in Solidity, we are working with a classic data structure called a Hash table_
+
+GOTCHA
+Keys are not stored with mappings: https://imgur.com/1mtIvrH
+_All we can do is Do a Lookup for single values_
+If the Key being looked up doesn't exist, we get back a default empty string value
+_The returned value depends on the value type (i.e. whether strings or integers or some others)_
+
+Final Diagram of the Campaign Contract: https://imgur.com/IKgkrhB
+
+approvers Variable will use key-value pair mappings instead of arrays.
+_Addresses will be the Keys, while a Boolean (True or False) will become the Value_
+
+We'll know whether or not someone has donated to our campaign by looking up their addresses inside this mapping, and if that look up returns TRUE, then it means that address must be part of the group.
+
+An _approvals mapping_ will also be added to the Request Struct - a mapping that tracks who has voted on a particular request.
+
+To track whether or not it's a YES or NO, a separate counter (approvalCount) that counts the number of people that said YES.

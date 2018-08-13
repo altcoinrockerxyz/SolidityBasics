@@ -294,3 +294,13 @@ _The Wrong Way of Creating a Voting System_
 In order to know wrongly designed way to avoid such pitfall, because it's a very bad approach inside a Solidity contract
 
 One function with two subroutines was presented - approveRequest(). It contains a for loop that checks if isApprover = true, and another for loop to check if isApprover has not voted yet.
+
+**Lecture 114: Issues with Arrays**
+
+_It all boils down to gas cost_
+
+Each subroutine will cost gas. Multiply that with the assumed number of users / contributors / voters and it could eventually cost hundreds of millions of gas -- thus a tremendous amount of money.
+
+Instructor's Recommendation:
+
+_Anytime you start working on your own personal contract, avoid working with arrays whenever possible._

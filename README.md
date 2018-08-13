@@ -304,3 +304,22 @@ Each subroutine will cost gas. Multiply that with the assumed number of users / 
 Instructor's Recommendation:
 
 _Anytime you start working on your own personal contract, avoid working with arrays whenever possible._
+
+**Lecture 115: Mappings vs Arrays**
+
+_Replace subroutines that uses arrays by subroutines that use mappings._
+
+Mapping - A collection of key-value pairs.
+
+_Why mapping will solve our issue_
+
+It all comes down to the search time for each of these data structures.
+
+| Type    | Search Time Algo     |
+| ------- | -------------------- |
+| Array   | Linear Time Search   |
+| Mapping | Constant Time Search |
+
+Linear Time - For every additional record that we add to the array, it will take a slightly larger amount of time; the size of array dictates how long the search is going to take.
+
+Constant Time - No matter how many pieces of data we are storing inside the mapping, it's always gonna take the exact same amount of time to execute the search. It doesn't matter how many people enter into our contract, the time required to query for one entry will always be constant (i.e. 1sec for 1 contributor, 10 contributors, 10,000 contributors).

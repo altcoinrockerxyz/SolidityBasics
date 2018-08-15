@@ -395,3 +395,5 @@ _To be able to select which request is being sought,_ the index of the request f
 **Lecture 121: Testing Request Approvals**
 
 _NOTE:_ Make sure to enclose each parameters in quotation marks before submitting a _createRequest_ function.
+
+**Lecture 122: Finalizing A Request**

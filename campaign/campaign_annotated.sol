@@ -21,6 +21,9 @@ contract Campaign {
     // define a mapping for approvers
     mapping(address => bool) public approvers; // label variable as approvers
 
+    // Lecture 122: Add a new integer that counts the number of approvers
+    uint public approversCount;
+
     // create a new modifier to restrict access to certain functions
     modifier restricted() {
         require(msg.sender == manager);
@@ -43,6 +46,9 @@ contract Campaign {
         // add the sender address (Key) to the mapping and give it a boolean value of TRUE
         // syntax similar to JavaScript objects
         approvers[msg.sender] = true; // give a True VALUE to the approver's address KEY
+
+        // increment approversCount
+        approversCount++;
     }
 
     // require struct variables to be passed into the function
@@ -72,6 +78,7 @@ contract Campaign {
         requests.push(newRequest);
     }
 
+    // Approving a Request
     function approveRequest(uint index) public { // pass on the index of the selected request
         // assign a variable
         Request storage request = requests[index];
@@ -91,4 +98,27 @@ contract Campaign {
         // and increment the approvalCount.
         request.approvalCount++;
     }
+
+    // Finalizing a Request (specify which request we're trying to finalize)
+    function finalizeRequest(uint index) public restricted { // the manager is the only one allowed to do this
+        Request storage request = requests[index]; // store requests[index] into variable request (small caps)
+        // Capital Request specifies that we are about to create a variable
+        // that's going to reference to a request struct
+
+        // Basic Checks:
+
+        // Check if at least 50% voted YES
+        require(request.approvalCount > (approversCount / 2));
+
+        // This request has not been marked as complete
+        require(!request.complete); // <-- check if it's false
+
+        // Transfer the funds to the recipient of the request
+        request.recipient.transfer(request.value);
+
+        // flip the flag to show it has been marked complete
+        request.complete = true;
+    }
+
+
 }

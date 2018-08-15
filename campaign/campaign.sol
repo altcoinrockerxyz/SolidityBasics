@@ -71,4 +71,24 @@ contract Campaign {
 
         requests.push(newRequest);
     }
+
+    function approveRequest(uint index) public { // pass on the index of the selected request
+        // assign a variable
+        Request storage request = requests[index];
+
+        // two quick checks
+        // first check: the person has already contributed
+        require(approvers[msg.sender]); // this gets a boolean of true if msg.sender already contributed
+
+        // second check: has NOT already approved the specific request
+        require(!request.approvals[msg.sender]);
+
+        // the person should be marked to have already voted on the requests
+        request.approvals[msg.sender] = true;
+
+        // place actual logic to add the person's address
+        // to the approvals hash (mapping)
+        // and increment the approvalCount.
+        request.approvalCount++;
+    }
 }

@@ -1,5 +1,24 @@
 pragma solidity ^0.4.17;
 
+// Lesson 125: Create the CampaignFactory contract
+
+contract CampaignFactory {
+    address[] public deployedCampaigns; // holds the list of all deployed campaigns
+
+    function createCampaign(uint minimum) public { // it receives a minimumContribution argument
+        // and passes it along to the newly created campaign
+        // instruct this contract to deploy a new instance of the Campaign
+        address newCampaign = new Campaign(minimum, msg.sender); // <-- This deploys a new campaign and returns the address
+        // the msg.sender has to be that of the person who is trying to invoke an instance
+        deployedCampaigns.push(newCampaign);
+    }
+
+    // add a function that returns the entire array of all deployed campaigns
+    function getDeployedCampaigns() public view returns (address[]) {
+        return deployedCampaigns;
+    }
+
+}
 contract Campaign {
     // define the struct at the very top of the contract
     // it does not create an instance of the Request struct bec it's just a definition
@@ -30,8 +49,8 @@ contract Campaign {
         _; // paste all other codes within the function that used this modifier
     }
 
-    function Campaign(uint minimum) public { // initializes a memory variable
-        manager = msg.sender; // assign the contract management to the contract deployer
+    function Campaign(uint minimum, address creator) public { // initializes a memory variable
+        manager = creator; // assign the contract management to the contract instance's deployer
         minimumContribution = minimum;
     }
 

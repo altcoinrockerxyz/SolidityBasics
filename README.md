@@ -397,3 +397,49 @@ _To be able to select which request is being sought,_ the index of the request f
 _NOTE:_ Make sure to enclose each parameters in quotation marks before submitting a _createRequest_ function.
 
 **Lecture 122: Finalizing A Request**
+
+**Lecture 123: Last Remix Test**
+
+**Lecture 124: Thinking About Deployment**
+
+_How to deploy the same contract multiple times or instances_
+
+For each instance deployed, there's one unique address. _Each of these addresses are completely separated from each other_
+
+Mockup: https://imgur.com/mF35qnt
+
+_NOTE:_ There has to be a way to record the contract address for each newly created campaign. This has to do with the functionality of the _Create Campaign_ button.
+
+_Solution 1:_ exposes the source code to the deployer and has the risk of modification by malicious users.
+
+_Solution 2:_ have the risk of requiring a huge payload on the deployment costs (each deployed contract will cost ethers)
+
+**Lecture 125: Solution to the Deployment**
+
+_Create a Factory Contract:_ To create new instances of the Campaign contract.
+
+- Users will invoke the Campaign Factory to create a new instance of the Campaign Contract fit for their Purpose
+- Users will shoulder the cost (via web3/metamask)
+- All campaign contract instances will be recorded within the Campaign Factory contract
+- Anyone can check the list of campaigns
+
+Diagrams:
+
+https://imgur.com/wdW4rhh
+https://imgur.com/r2v0YqO
+https://imgur.com/mEW2wvq
+
+**Lecture126: Adding a Campaign Factory**
+
+_Contains One Variable_
+
+deployedCampaigns[] - An array of addresses of all the deployed campaigns.
+
+_Contains Two Functions_
+
+createCampaign - Deploys a new instance of a Campaign and stores the resulting address back inside the deployedCampaigns[] array.
+getDeployedCampaigns - Returns a list of all deployed campaigns.
+
+Diagram:
+
+https://imgur.com/AaSxUe5

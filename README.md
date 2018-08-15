@@ -429,7 +429,7 @@ https://imgur.com/wdW4rhh
 https://imgur.com/r2v0YqO
 https://imgur.com/mEW2wvq
 
-**Lecture126: Adding a Campaign Factory**
+**Lecture 126: Adding a Campaign Factory**
 
 _Contains One Variable_
 
@@ -443,3 +443,16 @@ getDeployedCampaigns - Returns a list of all deployed campaigns.
 Diagram:
 
 https://imgur.com/AaSxUe5
+
+**Lecture 127: Testing the Factory**
+
+Only one factory will ever be deployed, but unlimited number of Campaign instances.
+Remix allows interaction with various campaigns. To do so:
+
+1.  Get the campaign address
+2.  Select Campaign from the drop down menu we used to select CampaignFactory
+3.  Paste the campaign address into the form field that says _Load contract from Address_
+
+Screenshots:
+https://imgur.com/OHsBzkW
+https://imgur.com/nVPfseE

@@ -499,3 +499,14 @@ Steps in creating compile.js
 - Write output to the _build_ directory as JSON files
 
 _This way, anytime in the future when we need to access the ABI (interface or bytecode of our contracts), we can read them from the build directory without the need to recompile any of our contracts._
+
+**Lecture 131: Single Run Compilation**
+
+Source code for the compile.js that does the following:
+
+1.  Remove the Build directory and contents if they already exist
+2.  Read the Campaign.sol source
+3.  Compile the source code and pull out the _contracts_ property
+4.  Re-generate the BUILD folder
+5.  Do a FOR-LOOP to extract the contracts and store into the Build folder
+6.  Run node _compile.js_

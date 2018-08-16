@@ -463,3 +463,22 @@ https://imgur.com/nVPfseE
 - Create a new directory called kickstart (mkdir)
 - Run _npm init_ and answer yes to last question prompt
 - Run _npm install --save ganache-cli mocha solc fs-extra web3@1.0.0-beta.26_
+
+**Lecture 129: Directory Structure**
+
+_Creation of different files and folders inside kickstart directory_
+
+Recap: The lottery project comprised of:
+
+- The compile.js Script
+- The deploy.js Script
+- The contracts directory
+- The test directory
+
+_Everything is in the root project directory_
+
+FOR KICKSTART PROJECT: We'll use a lot of different project files and folders
+
+- Some is going to be related to the Eth side of the app
+- Others are related entirely to the web side of things
+- Place all ethereum-related codes in its own directory (ethereum)

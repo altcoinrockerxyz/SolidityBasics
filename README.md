@@ -482,3 +482,20 @@ FOR KICKSTART PROJECT: We'll use a lot of different project files and folders
 - Some is going to be related to the Eth side of the app
 - Others are related entirely to the web side of things
 - Place all ethereum-related codes in its own directory (ethereum)
+- Create a contracts folder, compile.js and deploy.js files within the ethereum directory
+- Create a Campaign.sol file within the contracts folder
+
+**Lecture 130: A Better Compile Script**
+
+Spit out two files (Compiled Campaign and Compiled CampaignFactory) once the source code is compiled, save them to a project directory
+
+Create a build folder where all compiled contracts into this folder
+
+Steps in creating compile.js
+
+- Delete any existing _build_ folder (in case modifications were done)
+- Read _Campaign.sol_ from the _contracts_ directory
+- Compile both contracts with solidity compiler (will output two separate files)
+- Write output to the _build_ directory as JSON files
+
+_This way, anytime in the future when we need to access the ABI (interface or bytecode of our contracts), we can read them from the build directory without the need to recompile any of our contracts._

@@ -509,4 +509,17 @@ Source code for the compile.js that does the following:
 3.  Compile the source code and pull out the _contracts_ property
 4.  Re-generate the BUILD folder
 5.  Do a FOR-LOOP to extract the contracts and store into the Build folder
-6.  Run node _compile.js_
+6.  Run _node compile.js_
+
+**Lecture 132: More on Compile**
+
+_Explanation for the compile.js source code_
+
+NOTES:
+
+- Spit out the compiled source code into the Terminal window via the _console.log(output);_ code.
+- A _For-In Loop_ is used to iterate over the keys of an object.
+  _We are iterating over both the CampaignFactory and the Campaign contracts_
+- The COLON (:) in the filename (i.e. :Campaign.json) exists because it exists on the key. The KEYS are the ones generated upon running compile.js and shown in the console output
+- The .json extension is appended so that we very clearly label what type of file it is.
+- The second argument to the outputJsonSync --> _output[contract]_ is the actual contents that we want to write to the generated JSON file(s).

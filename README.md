@@ -456,3 +456,10 @@ Remix allows interaction with various campaigns. To do so:
 Screenshots:
 https://imgur.com/OHsBzkW
 https://imgur.com/nVPfseE
+
+**Lecture 127 (Section 6-1): Project Setup**
+
+- Go to root directory of github on local machine
+- Create a new directory called kickstart (mkdir)
+- Run _npm init_ and answer yes to last question prompt
+- Run _npm install --save ganache-cli mocha solc fs-extra web3@1.0.0-beta.26_

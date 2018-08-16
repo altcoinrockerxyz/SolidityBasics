@@ -531,3 +531,5 @@ Write some of the tests
 
 1.  Create a new folder at the root project folder called TEST. This is so all tests (whether ethereum or web3 or others) go into this folder.
 2.  Open up the test folder and create the Campaign.test.js test file.
+
+**Lecture 134: Creating Campaign Instances**

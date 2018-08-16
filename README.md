@@ -523,3 +523,11 @@ NOTES:
 - The COLON (:) in the filename (i.e. :Campaign.json) exists because it exists on the key. The KEYS are the ones generated upon running compile.js and shown in the console output
 - The .json extension is appended so that we very clearly label what type of file it is.
 - The second argument to the outputJsonSync --> _output[contract]_ is the actual contents that we want to write to the generated JSON file(s).
+- Remove the COLON from the generated files using concatenation syntax.
+
+**Lecture 133: Test File Setup**
+
+Write some of the tests
+
+1.  Create a new folder at the root project folder called TEST. This is so all tests (whether ethereum or web3 or others) go into this folder.
+2.  Open up the test folder and create the Campaign.test.js test file.

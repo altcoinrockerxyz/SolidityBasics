@@ -457,7 +457,7 @@ Screenshots:
 https://imgur.com/OHsBzkW
 https://imgur.com/nVPfseE
 
-**Lecture 127 (Section 6-1): Project Setup**
+**Lecture 128 (Section 6-1): Project Setup**
 
 - Go to root directory of github on local machine
 - Create a new directory called kickstart (mkdir)

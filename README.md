@@ -537,3 +537,25 @@ Write some of the tests
 - Finish up the beforeEach helper
 - Code the contents of the Campaign.test.js file
 - Take note on how codes are organized for when contracts are deployed, as compared to when deployed contracts are called
+
+**Lecture 140: Deployment**
+
+STEP 1:
+Make sure we are in the kickstart directory.
+Run 'npm install --save truffle-hdwallet-provider'
+
+STEP 2:
+Import interface and bytecode from the built factory JSON
+
+- Make sure to be inside the ethereum directory (from within the kickstart folder)
+- Run node deploy.js
+
+_NOTES:_
+
+We are only concerned with doing deployment of the campaignFactory (from the compiled version/JSON) so we make sure that our users have the ability to create new instances of a campaign through this factory.
+
+The compiled Campaign (JSON) on the other hand is needed once people start creating instances of campaigns and we need to use web3 inside our web app to interact with those deployed instances of a campaign. We will eventually need the ABI out of it so that we can work with those instances that have been deployed.
+
+_..attempting to deploy from account 0xa0D179f21B5F22a9b4ac54bCbd2FeCc50Ba0a00F_
+
+_..contract deployed to 0x2e75bB98d523ae9329041b45F25AEAb5e1e59E57_

@@ -533,3 +533,7 @@ Write some of the tests
 2.  Open up the test folder and create the Campaign.test.js test file.
 
 **Lecture 134: Creating Campaign Instances**
+
+- Finish up the beforeEach helper
+- Code the contents of the Campaign.test.js file
+- Take note on how codes are organized for when contracts are deployed, as compared to when deployed contracts are called

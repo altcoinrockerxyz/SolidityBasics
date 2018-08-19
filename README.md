@@ -584,3 +584,18 @@ Table of Routes how to navigate to various pages: https://imgur.com/fdFKRfw
 | /campaigns/0x8147              | Campaign details for campaign at address 0x8147         |
 | /campaigns/0x8147/requests     | List of requests for campaign at address 0x8147         |
 | /campaigns/0x8147/requests/new | Form to create a request for campaign at address 0x8147 |
+
+**Lecture 143: CRA vs Next**
+
+_RECAP: create-react-app helps create a boilerplate setup_
+
+It doesn't include anything to do with navigation, data loading or other tools. Since we will need more features, we will use another tool called _Next.js_.
+
+Next.js takes React and builds a bunch of functionality around it. A lot of fancy features are included out of the box i.e.:
+
+- Routing - taking a URL and deciding (from that) what content to show to the user.
+- Built-in Support for Server-side Rendering
+- Hot module reload, updates code inside app a little bit more easily (for devs)
+- Great support for showing multiple pages to the user
+- https://imgur.com/J0gdYdl
+- https://github.com/zeit/next.js

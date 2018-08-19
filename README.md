@@ -540,6 +540,12 @@ Write some of the tests
 
 **Lecture 140: Deployment**
 
+Create a deploy.js file from within the ethereum folder.
+
+**Lecture 141: Refactoring Deployment**
+
+This takes into account the deployment of the precompiled campaignFactory.JSON contract. It focuses on the creation of deploy.js and the actual deployment by running "node deploy.js" at the terminal.
+
 STEP 1:
 Make sure we are in the kickstart directory.
 Run 'npm install --save truffle-hdwallet-provider'
@@ -559,3 +565,22 @@ The compiled Campaign (JSON) on the other hand is needed once people start creat
 _..attempting to deploy from account 0xa0D179f21B5F22a9b4ac54bCbd2FeCc50Ba0a00F_
 
 _..contract deployed to 0x2e75bB98d523ae9329041b45F25AEAb5e1e59E57_
+
+**Lecture 142: App Mockups**
+
+How to use Ethereum with other libraries (i.e. React, Node JS) to build an actual application.
+
+Landing Page: https://imgur.com/7No2oSx
+Create a Campaign Page: https://imgur.com/T7xrdpL
+Campaign Details Page: https://imgur.com/QBjDqkX
+List of Pending Requests per Campaign: https://imgur.com/XQ52sDx
+Create Request Page: https://imgur.com/BckUbPQ
+Table of Routes how to navigate to various pages: https://imgur.com/fdFKRfw
+
+| Path                           | We should show...                                       |
+| ------------------------------ | ------------------------------------------------------- |
+| /                              | List of Campaigns                                       |
+| /campaigns/new                 | Form to make a campaign                                 |
+| /campaigns/0x8147              | Campaign details for campaign at address 0x8147         |
+| /campaigns/0x8147/requests     | List of requests for campaign at address 0x8147         |
+| /campaigns/0x8147/requests/new | Form to create a request for campaign at address 0x8147 |

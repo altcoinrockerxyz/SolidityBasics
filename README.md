@@ -610,3 +610,11 @@ Next's Pages Architecture
 - Every single file within the pages folder will automatically be turned into a webpage that we can visit inside of our application. https://imgur.com/91XVAN0
 
 Run _npm install --save next@4.1.4 react react-dom_ to install required tools and packages
+
+**Lecture 145: Basics of Next Routing**
+
+Step 1: On the root directory, create a folder called 'pages'
+Step 2: Create two files - newcampaign.js and show.js
+Step 3: To startup Next.js, we have to create a new script inside of our package.json file and by adding the line "dev": "next dev" on the "scripts" are (where "test": "mocha" is located) and the two have to be comma delimited
+Step 4: Build to verify that we can visit the two pages (on Terminal command line, run _npm run dev_)
+Step 5: Access http://localhost:3000 and add /show or /showcampaign to generate the html content of the two sample pages

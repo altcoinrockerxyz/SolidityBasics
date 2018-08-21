@@ -599,3 +599,14 @@ Next.js takes React and builds a bunch of functionality around it. A lot of fanc
 - Great support for showing multiple pages to the user
 - https://imgur.com/J0gdYdl
 - https://github.com/zeit/next.js
+
+**Lecture 144: How Next Works**
+
+Next's Pages Architecture
+
+- How to organize code in Next: https://imgur.com/lZ5QIy4
+- .next directory will specifically look for a directory called 'pages'
+- Inside the pages directory, we will create a bunch of react components.
+- Every single file within the pages folder will automatically be turned into a webpage that we can visit inside of our application. https://imgur.com/91XVAN0
+
+Run _npm install --save next@4.1.4 react react-dom_ to install required tools and packages

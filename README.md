@@ -618,3 +618,14 @@ Step 2: Create two files - newcampaign.js and show.js
 Step 3: To startup Next.js, we have to create a new script inside of our package.json file and by adding the line "dev": "next dev" on the "scripts" are (where "test": "mocha" is located) and the two have to be comma delimited
 Step 4: Build to verify that we can visit the two pages (on Terminal command line, run _npm run dev_)
 Step 5: Access http://localhost:3000 and add /show or /showcampaign to generate the html content of the two sample pages
+
+**Lecture 146: Root Routes**
+
+To have a Root Route page, make sure there is an index.js
+
+TODOs for the Campaign List Page
+
+1.  Configure web3 with a Provider from metamask
+2.  Tell web3 that a deployed copy of the 'CampaignFactory' exists
+3.  Use Factory instance to retrieve a list of deployed campaigns
+4.  Use React to show something about each campaign

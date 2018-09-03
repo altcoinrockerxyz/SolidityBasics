@@ -652,3 +652,18 @@ Step 1: Import Factory instance.
 NOTE: _Whenever Next imports a file from the pages directory, it's always going to expect that the file exports a React component. Not enough to define a component inside each file, but the export has to also be exported or else there will be an error._
 
 Expected Error Message: Window is not defined
+
+**Lecture 150: Why Next.JS**
+
+Next.JS makes use of server-side rendering. Our content gets shown much more quickly because the Next Server will render it before sending to browser.
+https://imgur.com/Xq7prTq
+
+_NOTE:_ Window (at web3.js) is a global variable that's available only inside the browser.
+It is not available on NodeJS, which is where our server is currently running.
+Whenever Next.JS loads up our code in an intent to render our react app on the server,
+that window variable is not defined.
+
+In short, we cannot directly access the window variable (on web3.js) now that we are using Next.JS.
+
+_The big idea behind using Next.JS is this -_
+When our code is taken and rendered on the Next server, on the next server, we are going to reach out to the Ethereum network and do some initial calls (data fetching, i.e. a list of our campaigns, how many votes, requests). We are gonna do (execute) all of those requests from our server. That means it doesn't matter if our viewers are using or not using Metamask.

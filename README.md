@@ -640,3 +640,15 @@ Create a factory.js file inside the ethereum directory
 Try out and access the pre-deployed CampagignFactory contract via Remix and create a Campaign.
 https://imgur.com/nsa7acg
 https://imgur.com/JTHmUy2
+
+**Lecture 149: Fetching Deployed Campaigns**
+
+Clicking the Get Deployed Campaign button via Remix should show all deployed campaigns. (Step 3 of ToDo List).
+
+Open index.js file to get a list of all active campaigns.
+Use the factory instance to get a list of all campaigns.
+Step 1: Import Factory instance.
+
+NOTE: _Whenever Next imports a file from the pages directory, it's always going to expect that the file exports a React component. Not enough to define a component inside each file, but the export has to also be exported or else there will be an error._
+
+Expected Error Message: Window is not defined

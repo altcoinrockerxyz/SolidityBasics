@@ -616,7 +616,7 @@ Run _npm install --save next@4.1.4 react react-dom_ to install required tools an
 Step 1: On the root directory, create a folder called 'pages'
 Step 2: Create two files - newcampaign.js and show.js
 Step 3: To startup Next.js, we have to create a new script inside of our package.json file and by adding the line "dev": "next dev" on the "scripts" are (where "test": "mocha" is located) and the two have to be comma delimited
-Step 4: Build to verify that we can visit the two pages (on Terminal command line, run _npm run dev_)
+Step 4: Build to verify that we can visit the two pages (on Terminal command line, run _npm run dev_ from the kickstarter root directory)
 Step 5: Access http://localhost:3000 and add /show or /showcampaign to generate the html content of the two sample pages
 
 **Lecture 146: Root Routes**
@@ -629,3 +629,14 @@ TODOs for the Campaign List Page
 2.  Tell web3 that a deployed copy of the 'CampaignFactory' exists
 3.  Use Factory instance to retrieve a list of deployed campaigns
 4.  Use React to show something about each campaign
+
+**Lecture 147: CampaignFactory Instance**
+
+Create a web3.js file inside the ethereum directory
+Create a factory.js file inside the ethereum directory
+
+**Lecture 148: Getting a Test Campaign**
+
+Try out and access the pre-deployed CampagignFactory contract via Remix and create a Campaign.
+https://imgur.com/nsa7acg
+https://imgur.com/JTHmUy2

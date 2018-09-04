@@ -670,4 +670,16 @@ When our code is taken and rendered on the Next server, on the next server, we a
 
 **Lecture 151: Server vs Client Web3 Instances**
 
-Rework web3.js to contain a conditional statement that performs different actions depending on whether the client is accessing using a browser with Metamask installed, or if not, then use a server-side process via INFURA service.
+Rework web3.js to contain a conditional statement that performs different actions depending on whether the client is accessing using a browser with Metamask installed, or if not, then use a server-side process via INFURA service. This removes the error message shown on the previous lecture.
+
+**Lecture 152: GetInitialProps Function**
+
+How to take the queried data and present it on the screen.
+
+_TAKE NOTE:_ We used componentDidMount() function, but NEXT.JS introduces one extra requirement around data loading because it doesn't execute componentDidMount() while working on the server-side. Instead, use getInitialProps() - used exclusively by NEXT.
+
+https://imgur.com/a9Ez6vh
+
+After processing getInitialProps, it will show up an initial data then take it and provide it to the actual CampaignIndex component as props on the server. This will be rendered on the server, then it will take the HTML component that is produced and send it down to the browser.
+
+To test exclusive rendering from the server, modify the JavaScript settings of the browser and set it to 'Always Block on the Site'.

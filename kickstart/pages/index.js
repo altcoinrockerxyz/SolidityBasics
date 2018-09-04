@@ -11,16 +11,31 @@ export default () => {
 
 // use Component base class from the react library so make sure it is imported from react at the top
 class CampaignIndex extends Component {
-  // define component did mount method, mark as async
+  // define the getInitialProps function
+  // static keyword allows it to be called without the need to create an instance
+  // [i.e. const campaignIndex = new CampaignIndex()]
+  // we skip rendering to avoid costly additional processing
+  static async getInitialProps() {
+    const campaigns = await factory.methods.getDeployedCampaigns().call(); // <-- call the function
+
+    // return { campaigns: campaigns };
+    // ES2015 code, we can further condense
+    return { campaigns };
+  }
+  /** define component did mount method, mark as async
   async componentDidMount() {
     const campaigns = await factory.methods.getDeployedCampaigns().call(); // <-- call the function
 
     // add a console log to check if it works as expected
     console.log(campaigns);
-  }
+  } **/
 
   render() {
-    return <div>Campaigns Index!</div>;
+    return (
+      <div>
+        Campaigns Index! Here is a list of campaigns: {this.props.campaigns[0]}
+      </div>
+    );
   }
 }
 

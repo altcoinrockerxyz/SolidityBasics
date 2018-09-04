@@ -65,9 +65,30 @@ var CampaignIndex = function (_Component) {
   }
 
   (0, _createClass3.default)(CampaignIndex, [{
-    key: "componentDidMount",
+    key: "render",
 
-    // define component did mount method, mark as async
+    /** define component did mount method, mark as async
+    async componentDidMount() {
+      const campaigns = await factory.methods.getDeployedCampaigns().call(); // <-- call the function
+       // add a console log to check if it works as expected
+      console.log(campaigns);
+    } **/
+
+    value: function render() {
+      return _react2.default.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        }
+      }, "Campaigns Index! Here is a list of campaigns: ", this.props.campaigns[0]);
+    }
+  }], [{
+    key: "getInitialProps",
+
+    // define the getInitialProps function
+    // static keyword allows it to be called without the need to create an instance
+    // [i.e. const campaignIndex = new CampaignIndex()]
+    // we skip rendering to avoid costly additional processing
     value: function () {
       var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
         var campaigns;
@@ -80,10 +101,7 @@ var CampaignIndex = function (_Component) {
 
               case 2:
                 campaigns = _context.sent;
-                // <-- call the function
-
-                // add a console log to check if it works as expected
-                console.log(campaigns);
+                return _context.abrupt("return", { campaigns: campaigns });
 
               case 4:
               case "end":
@@ -93,26 +111,16 @@ var CampaignIndex = function (_Component) {
         }, _callee, this);
       }));
 
-      function componentDidMount() {
+      function getInitialProps() {
         return _ref.apply(this, arguments);
       }
 
-      return componentDidMount;
+      return getInitialProps;
     }()
-  }, {
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        }
-      }, "Campaigns Index!");
-    }
   }]);
 
   return CampaignIndex;
 }(_react.Component);
 
 exports.default = CampaignIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIkNhbXBhaWduSW5kZXgiLCJtZXRob2RzIiwiZ2V0RGVwbG95ZWRDYW1wYWlnbnMiLCJjYWxsIiwiY2FtcGFpZ25zIiwiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPLEFBQWE7Ozs7Ozs7OztBQUVwQjtBQUNBO0FBQ0E7Ozs7OztBQU1BOztJLEFBQ007Ozs7Ozs7Ozs7U0FDSjs7Ozs7Ozs7Ozs7dUJBRTBCLGtCQUFBLEFBQVEsUUFBUixBQUFnQix1QkFBaEIsQUFBdUMsQTs7bUJBQXpEO0EscUNBQWlFO0FBRXZFOztBQUNBO3dCQUFBLEFBQVEsSUFBUixBQUFZOzs7Ozs7Ozs7Ozs7Ozs7Ozs7NkJBR0wsQUFDUDs2QkFBTyxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsT0FBQSxFQUFQLEFBQU8sQUFDUjs7Ozs7QUFYeUIsQSxBQWM1Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvYnJvd25maXNoL2dpdGh1Yi9Tb2xpZGl0eUJhc2ljcy9raWNrc3RhcnQifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIkNhbXBhaWduSW5kZXgiLCJwcm9wcyIsImNhbXBhaWducyIsIm1ldGhvZHMiLCJnZXREZXBsb3llZENhbXBhaWducyIsImNhbGwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBTyxBQUFhOzs7Ozs7Ozs7QUFFcEI7QUFDQTtBQUNBOzs7Ozs7QUFNQTs7SUFDTSxBOzs7Ozs7Ozs7O1NBWUo7Ozs7Ozs7Ozs2QkFRUyxBQUNQOzZCQUNFLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxPQUFBLEVBQ2lELHVEQUFBLEFBQUssTUFBTCxBQUFXLFVBRjlELEFBQ0UsQUFDaUQsQUFBcUIsQUFHekU7OztTQXpCRDs7QUFDQTtBQUNBO0FBQ0E7Ozs7Ozs7Ozs7dUJBRTBCLGtCQUFBLEFBQVEsUUFBUixBQUFnQix1QkFBdUIsQSxBQUF2Qzs7bUJBQWxCO0E7aURBSUMsRUFBRSxXLEFBQUY7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFWaUIsQSxBQTZCNUI7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL2Jyb3duZmlzaC9naXRodWIvU29saWRpdHlCYXNpY3Mva2lja3N0YXJ0In0=

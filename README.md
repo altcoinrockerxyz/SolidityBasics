@@ -667,3 +667,7 @@ In short, we cannot directly access the window variable (on web3.js) now that we
 
 _The big idea behind using Next.JS is this -_
 When our code is taken and rendered on the Next server, on the next server, we are going to reach out to the Ethereum network and do some initial calls (data fetching, i.e. a list of our campaigns, how many votes, requests). We are gonna do (execute) all of those requests from our server. That means it doesn't matter if our viewers are using or not using Metamask.
+
+**Lecture 151: Server vs Client Web3 Instances**
+
+Rework web3.js to contain a conditional statement that performs different actions depending on whether the client is accessing using a browser with Metamask installed, or if not, then use a server-side process via INFURA service.

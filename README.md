@@ -668,11 +668,11 @@ In short, we cannot directly access the window variable (on web3.js) now that we
 _The big idea behind using Next.JS is this -_
 When our code is taken and rendered on the Next server, on the next server, we are going to reach out to the Ethereum network and do some initial calls (data fetching, i.e. a list of our campaigns, how many votes, requests). We are gonna do (execute) all of those requests from our server. That means it doesn't matter if our viewers are using or not using Metamask.
 
-**Lecture 151: Server vs Client Web3 Instances**
+**Lecture 152: Server vs Client Web3 Instances**
 
 Rework web3.js to contain a conditional statement that performs different actions depending on whether the client is accessing using a browser with Metamask installed, or if not, then use a server-side process via INFURA service. This removes the error message shown on the previous lecture.
 
-**Lecture 152: GetInitialProps Function**
+**Lecture 153: GetInitialProps Function**
 
 How to take the queried data and present it on the screen.
 
@@ -684,9 +684,11 @@ After processing getInitialProps, it will show up an initial data then take it a
 
 To test exclusive rendering from the server, modify the JavaScript settings of the browser and set it to 'Always Block on the Site'.
 
-**Lecture 153: Semantic UI React**
+**Lecture 154: Semantic UI React**
 
 Semantic UI React is a component kit (library) that comes with a bunch of easily accessible pre-created components. It comes with styling already placed on them.
+
+https://react.semantic-ui.com
 
 https://imgur.com/ZuUzHLk
 
@@ -694,3 +696,12 @@ To install:
 
 1.  Stop the running server by pressing Ctrl C
 2.  Run _npm install --save semantic-ui-react_
+
+**Lecture 155: Card Group Setup**
+
+By default, installing Semantic UI give us access to a bunch of components (via pre-created codes). It doesn't include the CSS styling for them. One additional step is needed to actually include CSS (Semantic UI CSS).
+
+To do so, either add a linked stylesheet or install semantic-ui-css (npm install --save semantic-ui-css)
+
+Use the following as a layout guide
+https://react.semantic-ui.com/views/card/#types-group-props

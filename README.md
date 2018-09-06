@@ -538,11 +538,11 @@ Write some of the tests
 - Code the contents of the Campaign.test.js file
 - Take note on how codes are organized for when contracts are deployed, as compared to when deployed contracts are called
 
-**Lecture 140: Deployment**
+**Lecture 141: Deployment**
 
 Create a deploy.js file from within the ethereum folder.
 
-**Lecture 141: Refactoring Deployment**
+**Lecture 142: Refactoring Deployment**
 
 This takes into account the deployment of the precompiled campaignFactory.JSON contract. It focuses on the creation of deploy.js and the actual deployment by running "node deploy.js" at the terminal.
 
@@ -566,7 +566,7 @@ _..attempting to deploy from account 0xa0D179f21B5F22a9b4ac54bCbd2FeCc50Ba0a00F_
 
 _..contract deployed to 0x2e75bB98d523ae9329041b45F25AEAb5e1e59E57_
 
-**Lecture 142: App Mockups**
+**Lecture 143: App Mockups**
 
 How to use Ethereum with other libraries (i.e. React, Node JS) to build an actual application.
 
@@ -585,7 +585,7 @@ Table of Routes how to navigate to various pages: https://imgur.com/fdFKRfw
 | /campaigns/0x8147/requests     | List of requests for campaign at address 0x8147         |
 | /campaigns/0x8147/requests/new | Form to create a request for campaign at address 0x8147 |
 
-**Lecture 143: CRA vs Next**
+**Lecture 144: CRA vs Next**
 
 _RECAP: create-react-app helps create a boilerplate setup_
 
@@ -600,7 +600,7 @@ Next.js takes React and builds a bunch of functionality around it. A lot of fanc
 - https://imgur.com/J0gdYdl
 - https://github.com/zeit/next.js
 
-**Lecture 144: How Next Works**
+**Lecture 145: How Next Works**
 
 Next's Pages Architecture
 
@@ -611,7 +611,7 @@ Next's Pages Architecture
 
 Run _npm install --save next@4.1.4 react react-dom_ to install required tools and packages
 
-**Lecture 145: Basics of Next Routing**
+**Lecture 146: Basics of Next Routing**
 
 Step 1: On the root directory, create a folder called 'pages'
 Step 2: Create two files - newcampaign.js and show.js
@@ -619,7 +619,7 @@ Step 3: To startup Next.js, we have to create a new script inside of our package
 Step 4: Build to verify that we can visit the two pages (on Terminal command line, run _npm run dev_ from the kickstarter root directory)
 Step 5: Access http://localhost:3000 and add /show or /showcampaign to generate the html content of the two sample pages
 
-**Lecture 146: Root Routes**
+**Lecture 147: Root Routes**
 
 To have a Root Route page, make sure there is an index.js
 
@@ -630,18 +630,18 @@ TODOs for the Campaign List Page
 3.  Use Factory instance to retrieve a list of deployed campaigns
 4.  Use React to show something about each campaign
 
-**Lecture 147: CampaignFactory Instance**
+**Lecture 148: CampaignFactory Instance**
 
 Create a web3.js file inside the ethereum directory
 Create a factory.js file inside the ethereum directory
 
-**Lecture 148: Getting a Test Campaign**
+**Lecture 149: Getting a Test Campaign**
 
 Try out and access the pre-deployed CampagignFactory contract via Remix and create a Campaign.
 https://imgur.com/nsa7acg
 https://imgur.com/JTHmUy2
 
-**Lecture 149: Fetching Deployed Campaigns**
+**Lecture 150: Fetching Deployed Campaigns**
 
 Clicking the Get Deployed Campaign button via Remix should show all deployed campaigns. (Step 3 of ToDo List).
 
@@ -653,7 +653,7 @@ NOTE: _Whenever Next imports a file from the pages directory, it's always going 
 
 Expected Error Message: Window is not defined
 
-**Lecture 150: Why Next.JS**
+**Lecture 151: Why Next.JS**
 
 Next.JS makes use of server-side rendering. Our content gets shown much more quickly because the Next Server will render it before sending to browser.
 https://imgur.com/Xq7prTq
@@ -683,3 +683,14 @@ https://imgur.com/a9Ez6vh
 After processing getInitialProps, it will show up an initial data then take it and provide it to the actual CampaignIndex component as props on the server. This will be rendered on the server, then it will take the HTML component that is produced and send it down to the browser.
 
 To test exclusive rendering from the server, modify the JavaScript settings of the browser and set it to 'Always Block on the Site'.
+
+**Lecture 153: Semantic UI React**
+
+Semantic UI React is a component kit (library) that comes with a bunch of easily accessible pre-created components. It comes with styling already placed on them.
+
+https://imgur.com/ZuUzHLk
+
+To install:
+
+1.  Stop the running server by pressing Ctrl C
+2.  Run _npm install --save semantic-ui-react_

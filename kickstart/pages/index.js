@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card } from "semantic-ui-react";
+import { Card, Button } from "semantic-ui-react";
 import factory from "../ethereum/factory";
 
 // we need some location to fetch the data -- call our method getDeployedCampaigns
@@ -59,6 +59,7 @@ Lecture 157: Paste the link tag for semantic-UI CSS
           href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
         />
         Campaigns Index! Here is a list of campaigns: {this.renderCampaigns()}
+        <Button content="Create Campaign" icon="add circle" primary />
       </div>
     );
   }

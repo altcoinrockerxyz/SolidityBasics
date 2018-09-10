@@ -714,3 +714,7 @@ Replace the output html and value query from referencing just the first value in
 **Lecture 157: Adding CSS**
 
 NEXT.JS does not have support for CSS modules as recommended in Semantic UI React usage instructions. To use the CSS, a very temporary solution, copy the link tag and add directly to the render method.
+
+**Lecture 158: Adding a Button**
+
+https://react.semantic-ui.com/elements/button/#types-labeled-icon-shorthand

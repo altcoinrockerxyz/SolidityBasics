@@ -718,3 +718,17 @@ NEXT.JS does not have support for CSS modules as recommended in Semantic UI Reac
 **Lecture 158: Adding a Button**
 
 https://react.semantic-ui.com/elements/button/#types-labeled-icon-shorthand
+
+**Lecture 159: The Need for a Layout**
+
+- Add the Open Campaigns title above the list of campaigns.
+- Create a single Header component that could be used across all the different pages within the application without typing it redundantly in all the pages.
+
+_Next.JS makes it challenging to inject common react component into other pages, but it can be done._
+
+To do this,
+
+1.  Create a separate directory called _Components_ where we can place all components we can use in the future.
+2.  Create Layout.js to house some very common elements we want to display in different parts of the application (i.e. header, footer, sidebar, navigation, etc)
+
+https://imgur.com/4M6ISaR

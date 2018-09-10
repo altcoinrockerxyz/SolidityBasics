@@ -37,7 +37,7 @@ class CampaignIndex extends Component {
       // array function that one individual object for each card
       return {
         header: address,
-        description: <a>View Campaign</a>,
+        description: <a href=".">View Campaign</a>,
         fluid: true
       };
     });
@@ -46,12 +46,18 @@ class CampaignIndex extends Component {
   }
 
   /**
-Initial output 
+Initial output
 Campaigns Index! Here is a list of campaigns: {this.props.campaigns[0]}
+
+Lecture 157: Paste the link tag for semantic-UI CSS
 **/
   render() {
     return (
       <div>
+        <link
+          rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
+        />
         Campaigns Index! Here is a list of campaigns: {this.renderCampaigns()}
       </div>
     );

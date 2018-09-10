@@ -686,7 +686,7 @@ To test exclusive rendering from the server, modify the JavaScript settings of t
 
 **Lecture 154: Semantic UI React**
 
-Semantic UI React is a component kit (library) that comes with a bunch of easily accessible pre-created components. It comes with styling already placed on them.
+Semantic UI React is a component kit (library) that comes with a bunch of easily accessible pre-created components. It comes with styling already placed on them (but requires the stylesheet to be installed as well).
 
 https://react.semantic-ui.com
 
@@ -710,3 +710,7 @@ https://react.semantic-ui.com/views/card/#types-group-props
 
 Create a new function renderCampaigns() for use to create this card group component.
 Replace the output html and value query from referencing just the first value in the array (this.props.campaigns[0]), into a reference for all the values within the array as queried within the renderCampaigns() function.
+
+**Lecture 157: Adding CSS**
+
+NEXT.JS does not have support for CSS modules as recommended in Semantic UI React usage instructions. To use the CSS, a very temporary solution, copy the link tag and add directly to the render method.

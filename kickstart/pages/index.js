@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Card } from "semantic-ui-react";
 import factory from "../ethereum/factory";
 
 // we need some location to fetch the data -- call our method getDeployedCampaigns
@@ -30,10 +31,28 @@ class CampaignIndex extends Component {
     console.log(campaigns);
   } **/
 
+  renderCampaigns() {
+    // iterate
+    const items = this.props.campaigns.map(address => {
+      // array function that one individual object for each card
+      return {
+        header: address,
+        description: <a>View Campaign</a>,
+        fluid: true
+      };
+    });
+
+    return <Card.Group items={items} />;
+  }
+
+  /**
+Initial output 
+Campaigns Index! Here is a list of campaigns: {this.props.campaigns[0]}
+**/
   render() {
     return (
       <div>
-        Campaigns Index! Here is a list of campaigns: {this.props.campaigns[0]}
+        Campaigns Index! Here is a list of campaigns: {this.renderCampaigns()}
       </div>
     );
   }

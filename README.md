@@ -701,7 +701,12 @@ To install:
 
 By default, installing Semantic UI give us access to a bunch of components (via pre-created codes). It doesn't include the CSS styling for them. One additional step is needed to actually include CSS (Semantic UI CSS).
 
-To do so, either add a linked stylesheet or install semantic-ui-css (npm install --save semantic-ui-css)
+To do so, either add a linked stylesheet or install semantic-ui-css (_npm install --save semantic-ui-css_)
 
 Use the following as a layout guide
 https://react.semantic-ui.com/views/card/#types-group-props
+
+**Lecture 156: Rendering Card Groups**
+
+Create a new function renderCampaigns() for use to create this card group component.
+Replace the output html and value query from referencing just the first value in the array (this.props.campaigns[0]), into a reference for all the values within the array as queried within the renderCampaigns() function.

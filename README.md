@@ -784,3 +784,11 @@ Use (import) the Input component of semantic-ui-react.
 **Lecture 168: Form Submittal**
 
 Setup an event handler inside of new.js component
+
+**Lecture 169: Testing Submittal**
+
+There is a need for an error handler (notification) so users know if they are submitting the right thing.
+
+**Lecture 170: Form Error Handling**
+
+Semantic-UI documentation: Collections > Message > Negative/Error

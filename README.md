@@ -753,3 +753,14 @@ Purpose of container is to limit the content to a max width.
 **Lecture 163: Two Column Layout**
 
 _Render the button before the list of campaigns is rendered_
+
+**Lecture 164: Nested Routing**
+
+A separate page that will enable users to create campaigns of their own.
+
+To create a new page, create a new file inside the pages directory.
+https://imgur.com/yIaMV7S
+
+Routing for distinct URLs: https://imgur.com/2C8cAoK
+
+To get a nested routing URL, create a folder within pages.

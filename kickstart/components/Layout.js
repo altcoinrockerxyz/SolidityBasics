@@ -10,15 +10,15 @@ How will this component be used?
 
 // Boilerplate (default) component stuff
 import React from "react";
+import Header from "./Header";
 
 export default props => {
   // place props or (props) to reference props.children
   return (
     // a little bit of JSX for quick demo
     <div>
-      <h1>Im a header</h1>
+      <Header />
       {props.children}
-      <h1>Im a footer</h1>
     </div>
   );
 };

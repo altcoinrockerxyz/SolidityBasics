@@ -738,3 +738,9 @@ https://imgur.com/4M6ISaR
 Layout.js - is a reusable component and not something that a user should be able to visit on its own.. This is why it is placed on a different folder.
 
 _All the pages we make (i.e. index.js or show.js), we will always place the <Layout> component._
+
+**Lecture 161: Assembling a Header**
+
+Check out React Semantic-UI documentation and look for Collections > Menu, then on the right hand side of Types, there's a quick link to Content > Menu
+
+Use another file within components directory and call it Header.js in order to keep each file small and easy to understand.

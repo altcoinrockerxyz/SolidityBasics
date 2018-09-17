@@ -749,3 +749,7 @@ Use another file within components directory and call it Header.js in order to k
 
 On Semantic-UI documentation, Go to Elements > Container component.
 Purpose of container is to limit the content to a max width.
+
+**Lecture 163: Two Column Layout**
+
+_Render the button before the list of campaigns is rendered_

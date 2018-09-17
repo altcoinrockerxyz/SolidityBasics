@@ -62,6 +62,8 @@ thus it becomes _props.children_
 This means that in all the pages we make (i.e. index.js or show.js),
 we will always place the <Layout> component.
 
+NOTE: To place Button to right side, we add one property to it (floated="right")
+
 **/
   render() {
     return (
@@ -72,8 +74,13 @@ we will always place the <Layout> component.
             href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
           />
           <h3>Open Campaigns</h3>
-          Campaigns Index! Here is a list of campaigns: {this.renderCampaigns()}
-          <Button content="Create Campaign" icon="add circle" primary />
+          <Button
+            floated="right"
+            content="Create Campaign"
+            icon="add circle"
+            primary
+          />
+          {this.renderCampaigns()}
         </div>
       </Layout>
     );

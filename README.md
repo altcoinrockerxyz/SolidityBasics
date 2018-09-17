@@ -744,3 +744,8 @@ _All the pages we make (i.e. index.js or show.js), we will always place the <Lay
 Check out React Semantic-UI documentation and look for Collections > Menu, then on the right hand side of Types, there's a quick link to Content > Menu
 
 Use another file within components directory and call it Header.js in order to keep each file small and easy to understand.
+
+**Lecture 162: Constraining Content Width**
+
+On Semantic-UI documentation, Go to Elements > Container component.
+Purpose of container is to limit the content to a max width.

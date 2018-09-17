@@ -10,15 +10,16 @@ How will this component be used?
 
 // Boilerplate (default) component stuff
 import React from "react";
+import { Container } from "semantic-ui-react";
 import Header from "./Header";
 
 export default props => {
   // place props or (props) to reference props.children
   return (
     // a little bit of JSX for quick demo
-    <div>
+    <Container>
       <Header />
       {props.children}
-    </div>
+    </Container>
   );
 };

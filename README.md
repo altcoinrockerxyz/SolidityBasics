@@ -688,6 +688,8 @@ To test exclusive rendering from the server, modify the JavaScript settings of t
 
 Semantic UI React is a component kit (library) that comes with a bunch of easily accessible pre-created components. It comes with styling already placed on them (but requires the stylesheet to be installed as well).
 
+_Semantic UI React allows us to leverage its built in components so (as much as possible) we do not have to do any manual styling_
+
 https://react.semantic-ui.com
 
 https://imgur.com/ZuUzHLk
@@ -764,3 +766,13 @@ https://imgur.com/yIaMV7S
 Routing for distinct URLs: https://imgur.com/2C8cAoK
 
 To get a nested routing URL, create a folder within pages.
+
+**Lecture 165: Final CSS Fix**
+
+Move link tag to CSS into a place that can be accessed by all routed pages.
+
+**Lecture 166: Form Creation**
+
+Form that allows the user to add a new campaign.
+
+We make use the a Semantic-UI Form component represented as <Form></Form> (not to be mixed with HTML <form> tag) and <Form.Field> component.

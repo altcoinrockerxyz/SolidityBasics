@@ -28,6 +28,12 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _semanticUiReact = require("semantic-ui-react");
+
+var _Layout = require("../../components/Layout");
+
+var _Layout2 = _interopRequireDefault(_Layout);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = "/Users/brownfish/github/SolidityBasics/kickstart/pages/campaigns/new.js?entry";
@@ -46,12 +52,41 @@ var CampaignNew = function (_Component) {
   (0, _createClass3.default)(CampaignNew, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("h1", {
+      return _react2.default.createElement(_Layout2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 6
+          lineNumber: 9
         }
-      }, "New Campaign!");
+      }, _react2.default.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        }
+      }, "Create A Campaign"), _react2.default.createElement(_semanticUiReact.Form, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        }
+      }, _react2.default.createElement(_semanticUiReact.Form.Field, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      }, _react2.default.createElement("label", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        }
+      }, "Minimum Contribution"), _react2.default.createElement("input", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        }
+      })), _react2.default.createElement(_semanticUiReact.Button, { primary: true, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        }
+      }, "Create!")));
     }
   }]);
 
@@ -59,4 +94,4 @@ var CampaignNew = function (_Component) {
 }(_react.Component);
 
 exports.default = CampaignNew;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2NhbXBhaWducy9uZXcuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJDYW1wYWlnbk5ldyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFDQSxBQUFPLEFBQVM7Ozs7Ozs7QUFEaEI7OztJQUdNLEE7Ozs7Ozs7Ozs7OzZCQUNLLEFBQ1A7NkJBQU8sY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLE9BQUEsRUFBUCxBQUFPLEFBQ1I7Ozs7O0FBSHVCLEEsQUFNMUI7O2tCQUFBLEFBQWUiLCJmaWxlIjoibmV3LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9icm93bmZpc2gvZ2l0aHViL1NvbGlkaXR5QmFzaWNzL2tpY2tzdGFydCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2NhbXBhaWducy9uZXcuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJGb3JtIiwiQnV0dG9uIiwiTGF5b3V0IiwiQ2FtcGFpZ25OZXciXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQ0EsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVMsQUFBTTs7QUFDZixBQUFPLEFBQVk7Ozs7Ozs7QUFIbkI7OztJLEFBS007Ozs7Ozs7Ozs7OzZCQUNLLEFBQ1A7NkJBQ0UsQUFBQzs7b0JBQUQ7c0JBQUEsQUFDRTtBQURGO0FBQUEsT0FBQSxrQkFDRSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FERixBQUNFLEFBRUEsc0NBQUEsQUFBQzs7b0JBQUQ7c0JBQUEsQUFDRTtBQURGO0FBQUEseUJBQ0csY0FBRCxzQkFBQSxBQUFNOztvQkFBTjtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FERixBQUNFLEFBQ0E7O29CQUFBO3NCQUhKLEFBQ0UsQUFFRSxBQUdGO0FBSEU7QUFBQSwyQkFHRixBQUFDLHlDQUFPLFNBQVI7b0JBQUE7c0JBQUE7QUFBQTtTQVZOLEFBQ0UsQUFHRSxBQU1FLEFBSVA7Ozs7O0FBaEJ1QixBLEFBbUIxQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJuZXcuanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL2Jyb3duZmlzaC9naXRodWIvU29saWRpdHlCYXNpY3Mva2lja3N0YXJ0In0=

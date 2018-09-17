@@ -69,10 +69,6 @@ NOTE: To place Button to right side, we add one property to it (floated="right")
     return (
       <Layout>
         <div>
-          <link
-            rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
-          />
           <h3>Open Campaigns</h3>
           <Button
             floated="right"

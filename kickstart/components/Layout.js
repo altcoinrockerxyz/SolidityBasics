@@ -11,13 +11,23 @@ How will this component be used?
 // Boilerplate (default) component stuff
 import React from "react";
 import { Container } from "semantic-ui-react";
+import Head from "next/head";
 import Header from "./Header";
 
 export default props => {
   // place props or (props) to reference props.children
   return (
     // a little bit of JSX for quick demo
+    // move the link tag into the head tag by adding a helper via import
+    // placing any other tags inside the <Head> component,
+    // everything will automatically be moved up to the head tag of the page's html
     <Container>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
+        />
+      </Head>
       <Header />
       {props.children}
     </Container>

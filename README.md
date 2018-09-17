@@ -776,3 +776,7 @@ Move link tag to CSS into a place that can be accessed by all routed pages.
 Form that allows the user to add a new campaign.
 
 We make use the a Semantic-UI Form component represented as <Form></Form> (not to be mixed with HTML <form> tag) and <Form.Field> component.
+
+**Lecture 167: Input Change Handlers**
+
+Use (import) the Input component of semantic-ui-react.

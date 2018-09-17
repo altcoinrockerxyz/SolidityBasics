@@ -780,3 +780,7 @@ We make use the a Semantic-UI Form component represented as <Form></Form> (not t
 **Lecture 167: Input Change Handlers**
 
 Use (import) the Input component of semantic-ui-react.
+
+**Lecture 168: Form Submittal**
+
+Setup an event handler inside of new.js component

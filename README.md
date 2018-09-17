@@ -728,7 +728,13 @@ _Next.JS makes it challenging to inject common react component into other pages,
 
 To do this,
 
-1.  Create a separate directory called _Components_ where we can place all components we can use in the future.
+1.  Create a separate directory called _components_ where we can place all components we can use in the future.
 2.  Create Layout.js to house some very common elements we want to display in different parts of the application (i.e. header, footer, sidebar, navigation, etc)
 
 https://imgur.com/4M6ISaR
+
+**Lecture 160: The Layout Component**
+
+Layout.js - is a reusable component and not something that a user should be able to visit on its own.. This is why it is placed on a different folder.
+
+_All the pages we make (i.e. index.js or show.js), we will always place the <Layout> component._

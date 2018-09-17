@@ -42,6 +42,10 @@ var _factory = require("../ethereum/factory");
 
 var _factory2 = _interopRequireDefault(_factory);
 
+var _Layout = require("../components/Layout");
+
+var _Layout2 = _interopRequireDefault(_Layout);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = "/Users/brownfish/github/SolidityBasics/kickstart/pages/index.js?entry";
@@ -84,7 +88,7 @@ var CampaignIndex = function (_Component) {
           header: address,
           description: _react2.default.createElement("a", { href: ".", __source: {
               fileName: _jsxFileName,
-              lineNumber: 40
+              lineNumber: 41
             }
           }, "View Campaign"),
           fluid: true
@@ -93,7 +97,7 @@ var CampaignIndex = function (_Component) {
 
       return _react2.default.createElement(_semanticUiReact.Card.Group, { items: items, __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 46
         }
       });
     }
@@ -104,31 +108,44 @@ var CampaignIndex = function (_Component) {
     Lecture 157: Paste the link tag for semantic-UI CSS
     **/
 
+    /** Lecture 160
+    All JSX (i.e. html contents) inside the <Layout></Layout> component
+    will get passed to the Layout component as a Property called _children_
+    thus it becomes _props.children_
+    This means that in all the pages we make (i.e. index.js or show.js),
+    we will always place the <Layout> component.
+    **/
+
   }, {
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", {
+      return _react2.default.createElement(_Layout2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 68
+        }
+      }, _react2.default.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
         }
       }, _react2.default.createElement("link", {
         rel: "stylesheet",
         href: "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 70
         }
       }), _react2.default.createElement("h3", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 74
         }
       }, "Open Campaigns"), "Campaigns Index! Here is a list of campaigns: ", this.renderCampaigns(), _react2.default.createElement(_semanticUiReact.Button, { content: "Create Campaign", icon: "add circle", primary: true, __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 76
         }
-      }));
+      })));
     }
   }], [{
     key: "getInitialProps",
@@ -171,4 +188,4 @@ var CampaignIndex = function (_Component) {
 }(_react.Component);
 
 exports.default = CampaignIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkJ1dHRvbiIsImZhY3RvcnkiLCJDYW1wYWlnbkluZGV4IiwiaXRlbXMiLCJwcm9wcyIsImNhbXBhaWducyIsIm1hcCIsImhlYWRlciIsImFkZHJlc3MiLCJkZXNjcmlwdGlvbiIsImZsdWlkIiwicmVuZGVyQ2FtcGFpZ25zIiwibWV0aG9kcyIsImdldERlcGxveWVkQ2FtcGFpZ25zIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFTLEFBQU07O0FBQ2YsQUFBTyxBQUFhOzs7Ozs7Ozs7QUFFcEI7QUFDQTtBQUNBOzs7Ozs7QUFNQTs7SUFDTSxBOzs7Ozs7Ozs7O1NBWUo7Ozs7Ozs7OztzQ0FRa0IsQUFDaEI7QUFDQTtVQUFNLGFBQVEsQUFBSyxNQUFMLEFBQVcsVUFBWCxBQUFxQixJQUFJLG1CQUFXLEFBQ2hEO0FBQ0E7O2tCQUFPLEFBQ0csQUFDUjt1Q0FBYSxjQUFBLE9BQUcsTUFBSCxBQUFRO3dCQUFSOzBCQUFBO0FBQUE7V0FBQSxFQUZSLEFBRVEsQUFDYjtpQkFIRixBQUFPLEFBR0UsQUFFVjtBQUxRLEFBQ0w7QUFISixBQUFjLEFBU2QsT0FUYzs7MkNBU1AsQUFBQyxzQkFBRCxBQUFNLFNBQU0sT0FBWixBQUFtQjtvQkFBbkI7c0JBQVAsQUFBTyxBQUNSO0FBRFE7T0FBQTtBQUdUOzs7Ozs7Ozs7OzZCQU1TLEFBQ1A7NkJBQ0UsY0FBQTs7b0JBQUE7c0JBQUEsQUFDRTtBQURGO0FBQUEsT0FBQTthQUNFLEFBQ00sQUFDSjtjQUZGLEFBRU87O29CQUZQO3NCQURGLEFBQ0UsQUFJQTtBQUpBO0FBQ0UsMEJBR0YsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBTEYsQUFLRSxtQkFDK0MsdURBTmpELEFBTWlELEFBQUssQUFDcEQsbUNBQUEsQUFBQyx5Q0FBTyxTQUFSLEFBQWdCLG1CQUFrQixNQUFsQyxBQUF1QyxjQUFhLFNBQXBEO29CQUFBO3NCQVJKLEFBQ0UsQUFPRSxBQUdMO0FBSEs7Ozs7U0FoRE47O0FBQ0E7QUFDQTtBQUNBOzs7Ozs7Ozs7O3VCQUUwQixrQkFBQSxBQUFRLFFBQVIsQUFBZ0IsdUJBQWhCLEFBQXVDLEE7O21CQUF6RDtBO2lEQUlDLEVBQUUsV0FBRixBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBVmlCLEEsQUF1RDVCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9icm93bmZpc2gvZ2l0aHViL1NvbGlkaXR5QmFzaWNzL2tpY2tzdGFydCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkJ1dHRvbiIsImZhY3RvcnkiLCJMYXlvdXQiLCJDYW1wYWlnbkluZGV4IiwiaXRlbXMiLCJwcm9wcyIsImNhbXBhaWducyIsIm1hcCIsImhlYWRlciIsImFkZHJlc3MiLCJkZXNjcmlwdGlvbiIsImZsdWlkIiwicmVuZGVyQ2FtcGFpZ25zIiwibWV0aG9kcyIsImdldERlcGxveWVkQ2FtcGFpZ25zIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFTLEFBQU07O0FBQ2YsQUFBTyxBQUFhOzs7O0FBQ3BCLEFBQU8sQUFBWTs7Ozs7Ozs7O0FBRW5CO0FBQ0E7QUFDQTs7Ozs7O0FBTUE7O0ksQUFDTTs7Ozs7Ozs7OztTQVlKOzs7Ozs7Ozs7c0NBUWtCLEFBQ2hCO0FBQ0E7VUFBTSxhQUFRLEFBQUssTUFBTCxBQUFXLFVBQVgsQUFBcUIsSUFBSSxtQkFBVyxBQUNoRDtBQUNBOztrQkFBTyxBQUNHLEFBQ1I7dUNBQWEsY0FBQSxPQUFHLE1BQUgsQUFBUTt3QkFBUjswQkFBQTtBQUFBO1dBQUEsRUFGUixBQUVRLEFBQ2I7aUJBSEYsQUFBTyxBQUdFLEFBRVY7QUFMUSxBQUNMO0FBSEosQUFBYyxBQVNkLE9BVGM7OzJDQVNQLEFBQUMsc0JBQUQsQUFBTSxTQUFNLE9BQVosQUFBbUI7b0JBQW5CO3NCQUFQLEFBQU8sQUFDUjtBQURRO09BQUE7QUFHVDs7QUFPQTs7Ozs7Ozs7Ozs7Ozs7Ozs2QkFVUyxBQUNQOzZCQUNFLEFBQUM7O29CQUFEO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0UsY0FBQTs7b0JBQUE7c0JBQUEsQUFDRTtBQURGO0FBQUE7YUFDRSxBQUNNLEFBQ0o7Y0FGRixBQUVPOztvQkFGUDtzQkFERixBQUNFLEFBSUE7QUFKQTtBQUNFLDBCQUdGLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQUxGLEFBS0UsbUJBQytDLHVEQU5qRCxBQU1pRCxBQUFLLEFBQ3BELG1DQUFBLEFBQUMseUNBQU8sU0FBUixBQUFnQixtQkFBa0IsTUFBbEMsQUFBdUMsY0FBYSxTQUFwRDtvQkFBQTtzQkFUTixBQUNFLEFBQ0UsQUFPRSxBQUlQO0FBSk87Ozs7U0E1RFI7O0FBQ0E7QUFDQTtBQUNBOzs7Ozs7Ozs7O3VCQUUwQixrQkFBQSxBQUFRLFFBQVIsQUFBZ0IsdUJBQWhCLEFBQXVDLEE7O21CQUF6RDtBO2lEQUlDLEVBQUUsV0FBRixBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBVmlCLEEsQUFvRTVCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9icm93bmZpc2gvZ2l0aHViL1NvbGlkaXR5QmFzaWNzL2tpY2tzdGFydCJ9

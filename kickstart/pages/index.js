@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, Button } from "semantic-ui-react";
 import factory from "../ethereum/factory";
+import Layout from "../components/Layout";
 
 // we need some location to fetch the data -- call our method getDeployedCampaigns
 // to do that, redefine this from a functional component to a class-based component
@@ -51,17 +52,30 @@ Campaigns Index! Here is a list of campaigns: {this.props.campaigns[0]}
 
 Lecture 157: Paste the link tag for semantic-UI CSS
 **/
+
+  /** Lecture 160
+
+All JSX (i.e. html contents) inside the <Layout></Layout> component
+will get passed to the Layout component as a Property called _children_
+thus it becomes _props.children_
+
+This means that in all the pages we make (i.e. index.js or show.js),
+we will always place the <Layout> component.
+
+**/
   render() {
     return (
-      <div>
-        <link
-          rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
-        />
-        <h3>Open Campaigns</h3>
-        Campaigns Index! Here is a list of campaigns: {this.renderCampaigns()}
-        <Button content="Create Campaign" icon="add circle" primary />
-      </div>
+      <Layout>
+        <div>
+          <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"
+          />
+          <h3>Open Campaigns</h3>
+          Campaigns Index! Here is a list of campaigns: {this.renderCampaigns()}
+          <Button content="Create Campaign" icon="add circle" primary />
+        </div>
+      </Layout>
     );
   }
 }

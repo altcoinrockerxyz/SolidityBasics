@@ -797,3 +797,15 @@ Semantic-UI documentation: Collections > Message > Negative/Error
 
 Semantic UI documentation > Button > States > Loading
 https://imgur.com/fgQWtFV
+
+**Lecture 172: Routing Issues**
+
+_NEXT JS has a problem with its routing system_
+
+The next three routes we are to create will make use of a wildcard info or variable in the URL.
+This aspect is not supported (by default) by Next JS. For this we need to use a helper module found at:
+
+https://github.com/fridays/next-routes
+
+Run npm install next-routes --save
+Create routes.js

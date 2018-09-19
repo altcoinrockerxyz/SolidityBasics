@@ -792,3 +792,8 @@ There is a need for an error handler (notification) so users know if they are su
 **Lecture 170: Form Error Handling**
 
 Semantic-UI documentation: Collections > Message > Negative/Error
+
+**Lecture 171: Button Spinners**
+
+Semantic UI documentation > Button > States > Loading
+https://imgur.com/fgQWtFV

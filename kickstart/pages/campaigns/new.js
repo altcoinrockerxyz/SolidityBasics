@@ -8,13 +8,17 @@ import web3 from "../../ethereum/web3";
 class CampaignNew extends Component {
   state = {
     minimumContribution: "",
-    errorMessage: ""
+    errorMessage: "",
+    loading: false //
   };
 
   // event handler
   onSubmit = async () => {
     // pass this in to the Form tag
     event.preventDefault(); // keeps the browser from attempting to submit the form
+
+    // run the loading spinner before running the try {} function
+    this.setState({ loading: true, errorMessage: "" });
 
     try {
       // get a list of available accounts
@@ -33,6 +37,8 @@ class CampaignNew extends Component {
       // err is a thrown variable
       this.setState({ errorMessage: err.message.split("\n")[0] });
     }
+
+    this.setState({ loading: false });
   };
 
   // make sure there's no parentheses after this.onSubmit
@@ -59,7 +65,9 @@ class CampaignNew extends Component {
           </Form.Field>
 
           <Message error header="Ooops!" content={this.state.errorMessage} />
-          <Button primary>Create!</Button>
+          <Button loading={this.state.loading} primary>
+            Create!
+          </Button>
         </Form>
       </Layout>
     );

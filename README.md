@@ -809,3 +809,10 @@ https://github.com/fridays/next-routes
 
 Run npm install next-routes --save
 Create routes.js
+
+**Lecture 173: Next Routes Setup**
+
+This introduces Server.js and Routes.js so that a user could be redirected upon creation of a new campaign.
+
+https://imgur.com/v50cdZ8
+server.js - Used to manually boot up our NEXT application and specifically tell it to use our routes.js file.

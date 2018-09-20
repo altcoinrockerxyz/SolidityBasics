@@ -816,3 +816,7 @@ This introduces Server.js and Routes.js so that a user could be redirected upon 
 
 https://imgur.com/v50cdZ8
 server.js - Used to manually boot up our NEXT application and specifically tell it to use our routes.js file.
+
+**Lecture 174: Automatic Navigation**
+
+Getting access to our Router object from our Routes file.

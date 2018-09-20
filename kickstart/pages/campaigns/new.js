@@ -4,6 +4,7 @@ import { Form, Button, Input, Message } from "semantic-ui-react";
 import Layout from "../../components/Layout";
 import factory from "../../ethereum/factory";
 import web3 from "../../ethereum/web3";
+import { Router } from "../../routes"; // what to use once a campaign is created
 
 class CampaignNew extends Component {
   state = {
@@ -33,6 +34,8 @@ class CampaignNew extends Component {
           from: accounts[0] // this assumes metamask is turned on
           // and there's at least one active account
         });
+
+      Router.pushRoute("/"); // to redirect users to this index route
     } catch (err) {
       // err is a thrown variable
       this.setState({ errorMessage: err.message.split("\n")[0] });

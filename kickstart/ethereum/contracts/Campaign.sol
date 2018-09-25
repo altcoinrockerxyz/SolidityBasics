@@ -16,6 +16,8 @@ contract CampaignFactory {
     }
 
 }
+
+// add a call to get four details of the campaign (via Lecture 180)
 contract Campaign {
     struct Request {
         string description;
@@ -94,5 +96,26 @@ contract Campaign {
         request.recipient.transfer(request.value);
 
         request.complete = true;
+    }
+
+    // Lecture 180
+    function getSummary() public view returns (
+        uint, uint, uint, uint, address
+        ) {
+            return (
+              // Campaign Balance
+              // Requests
+              // Minimum Contribution
+              // Contributors
+                this.balance,
+                minimumContribution,
+                requests.length,
+                approversCount,
+                manager // address of the manager
+              );
+    }
+
+    function getRequestsCount() public view returns (uint) {
+        return requests.length;
     }
 }

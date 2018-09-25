@@ -855,3 +855,13 @@ Show Four (4) Campaign Details
 _Create a getSummary helper that does one call, instead of four, to get the four details_
 
 To do so, we need to change some of the existing codes.
+
+**Lecture 180: Redeploying CampaignFactory**
+
+Create a getSummary and getRequestsCount functions then redeploy the application
+
+Run compile and deploy
+
+_attempting to deploy from account 0xa0D179f21B5F22a9b4ac54bCbd2FeCc50Ba0a00F_
+
+_Contract deployed to 0x5a3F507b01c3604B56f08472bF4fC520dCEfcc53_

@@ -21,7 +21,7 @@ var instance = new _web2.default.eth.Contract(
 JSON.parse(_CampaignFactory2.default.interface),
 
 // second argument is the address
-"0x2e75bB98d523ae9329041b45F25AEAb5e1e59E57"); // get the instance we just created
+"0x5a3F507b01c3604B56f08472bF4fC520dCEfcc53"); // get the instance we just created
 
 // import the compiled contract (ABI) placed within the build directory
 exports.default = instance;

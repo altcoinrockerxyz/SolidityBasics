@@ -10,7 +10,7 @@ const instance = new web3.eth.Contract(
   JSON.parse(CampaignFactory.interface),
 
   // second argument is the address
-  "0x2e75bB98d523ae9329041b45F25AEAb5e1e59E57"
+  "0x5a3F507b01c3604B56f08472bF4fC520dCEfcc53"
 );
 
 export default instance;

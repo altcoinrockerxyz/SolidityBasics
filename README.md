@@ -830,3 +830,14 @@ Import the Link helper on the Header.js file for use on the html tags for naviga
 The Link Tag is what gives us the initial navigation functionality, while the anchor tag is what allows to to do right-clicks-open-in-new-tab stuff.. and inside the anchor tag, we could use anything we need.
 
 Use back-tick when referencing a dynamically generated link (i.e. when accessing each campaign using the campaign's contract address).
+
+**Lecture 177: Restart the Server**
+Execute npm run dev
+
+**Lecture 178: Route Mappings**
+
+Add a routing rule to our Routes.js file.
+
+Create the component (pages/campaigns/show.js file) before setting up the Routes.js
+
+_Note:_ Adding the wildcard route breaks the existing link (i.e. campaigns/new) so there is a need to specify that link prior to placing a wildcard route.

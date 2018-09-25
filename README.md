@@ -841,3 +841,17 @@ Add a routing rule to our Routes.js file.
 Create the component (pages/campaigns/show.js file) before setting up the Routes.js
 
 _Note:_ Adding the wildcard route breaks the existing link (i.e. campaigns/new) so there is a need to specify that link prior to placing a wildcard route.
+
+**Lecture 179: Planning CampaignShow**
+
+Mockup: https://imgur.com/m2LmLmY
+
+Show Header Nav
+Show Four (4) Campaign Details
+-- Campaign Balance
+-- Pending Requests
+-- Minimum Contribution
+-- Contributors
+_Create a getSummary helper that does one call, instead of four, to get the four details_
+
+To do so, we need to change some of the existing codes.

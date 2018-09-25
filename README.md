@@ -824,3 +824,9 @@ Getting access to our Router object from our Routes file.
 **Lecture 175: Header Navigation**
 
 Import the Link helper on the Header.js file for use on the html tags for navigation, replacing the Menu.Item tags.
+
+**Lecture 176: Routing to Campaigns**
+
+The Link Tag is what gives us the initial navigation functionality, while the anchor tag is what allows to to do right-clicks-open-in-new-tab stuff.. and inside the anchor tag, we could use anything we need.
+
+Use back-tick when referencing a dynamically generated link (i.e. when accessing each campaign using the campaign's contract address).

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Card, Button } from "semantic-ui-react";
 import factory from "../ethereum/factory";
 import Layout from "../components/Layout";
+// import the Link helper from Routes.js file
+import { Link } from "../routes";
 
 // we need some location to fetch the data -- call our method getDeployedCampaigns
 // to do that, redefine this from a functional component to a class-based component
@@ -36,9 +38,15 @@ class CampaignIndex extends Component {
     // iterate
     const items = this.props.campaigns.map(address => {
       // array function that one individual object for each card
+      // wrap the anchor tag with a link tag
+      // Use ES6 template string, back ticks NOT apostrophe
       return {
         header: address,
-        description: <a href=".">View Campaign</a>,
+        description: (
+          <Link route={`/campaigns/${address}`}>
+            <a>View Campaign</a>
+          </Link>
+        ),
         fluid: true
       };
     });
@@ -70,12 +78,16 @@ NOTE: To place Button to right side, we add one property to it (floated="right")
       <Layout>
         <div>
           <h3>Open Campaigns</h3>
-          <Button
-            floated="right"
-            content="Create Campaign"
-            icon="add circle"
-            primary
-          />
+          <Link route="/campaigns/new">
+            <a>
+              <Button
+                floated="right"
+                content="Create Campaign"
+                icon="add circle"
+                primary
+              />
+            </a>
+          </Link>
           {this.renderCampaigns()}
         </div>
       </Layout>

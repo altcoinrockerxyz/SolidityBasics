@@ -820,3 +820,7 @@ server.js - Used to manually boot up our NEXT application and specifically tell 
 **Lecture 174: Automatic Navigation**
 
 Getting access to our Router object from our Routes file.
+
+**Lecture 175: Header Navigation**
+
+Import the Link helper on the Header.js file for use on the html tags for navigation, replacing the Menu.Item tags.

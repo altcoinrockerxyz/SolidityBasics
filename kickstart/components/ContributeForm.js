@@ -6,7 +6,10 @@ import { Router } from "../routes";
 
 class ContributeForm extends Component {
   state = {
-    value: ""
+    value: "",
+    // Lecture 192: Add two additional values
+    errorMessage: "",
+    loading: false
   };
 
   // make the onSubmit function
@@ -21,6 +24,8 @@ class ContributeForm extends Component {
     // campaign is Campaign with passed in address
     const campaign = Campaign(this.props.address);
 
+    this.setState({ loading: true, errorMessage: "" }); // Lecture 192
+
     try {
       const accounts = await web3.eth.getAccounts(); // place async at event on onSubmit
       await campaign.methods.contribute().send({
@@ -32,14 +37,21 @@ class ContributeForm extends Component {
       // Lecture 191: Refresh Pages, Use ES2015 template string (back ticks),
       // Pass in the URL of the current page we are looking at
       Router.replaceRoute(`/campaigns/${this.props.address}`);
-    } catch (err) {}
+    } catch (err) {
+      this.setState({ errorMessage: err.message.split("\n")[0] });
+    }
+
+    // after everything occurs, turn our loading flag off no matter what
+    // reset the value of the contribution amount at the same time
+    this.setState({ loading: false, value: "" });
   };
 
   // no () at onSubmit within the Form tag, we dont wanna call it at render time
   // but a reference to the function so we can call it sometime in the future
+  // Lecture 192: pass in the loading flag, for error message, we
   render() {
     return (
-      <Form onSubmit={this.onSubmit}>
+      <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
         <Form.Field>
           <label>Amount to Contribute</label>
           <Input
@@ -49,7 +61,11 @@ class ContributeForm extends Component {
             labelPosition="right"
           />
         </Form.Field>
-        <Button primary>Contribute!</Button>
+
+        <Message error header="Ooops!" content={this.state.errorMessage} />
+        <Button primary loading={this.state.loading}>
+          Contribute!
+        </Button>
       </Form>
     );
   }

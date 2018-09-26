@@ -922,3 +922,7 @@ Note: Anytime we want to call a function, always WRAP IT on a Try-Catch statemen
 Objective: To automatically refresh a component (or the showCampaign method) and return the summary again right after someone contributed.
 
 To do so, we have to make use of our _router object_ to just refresh the route we are currently looking at.
+
+**Lecture 192: Spinners and Error Handlers**
+
+Add the spinner property on the Button, and the Error Handler Message via the catch(err)

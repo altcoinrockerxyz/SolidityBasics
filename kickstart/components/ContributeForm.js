@@ -2,6 +2,7 @@ import React, { Component } from "react"; // boilerplate components
 import { Form, Input, Message, Button } from "semantic-ui-react";
 import Campaign from "../ethereum/campaign";
 import web3 from "../ethereum/web3";
+import { Router } from "../routes";
 
 class ContributeForm extends Component {
   state = {
@@ -27,6 +28,10 @@ class ContributeForm extends Component {
         from: accounts[0],
         value: web3.utils.toWei(this.state.value, "ether") // value will be entered in ether but we have to convert to wei
       });
+
+      // Lecture 191: Refresh Pages, Use ES2015 template string (back ticks),
+      // Pass in the URL of the current page we are looking at
+      Router.replaceRoute(`/campaigns/${this.props.address}`);
     } catch (err) {}
   };
 

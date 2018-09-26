@@ -916,3 +916,9 @@ This process allows the ContributeForm.js to have access to this.props.address v
 The campaign instance is now available inside our onSubmit function. Next thing to do is to get a list of our accounts and call a contribute function on our campaign.
 
 Note: Anytime we want to call a function, always WRAP IT on a Try-Catch statement. This makes sure we handle any message appropriately.
+
+**Lecture 191: Refreshing Contract Data**
+
+Objective: To automatically refresh a component (or the showCampaign method) and return the summary again right after someone contributed.
+
+To do so, we have to make use of our _router object_ to just refresh the route we are currently looking at.

@@ -867,6 +867,10 @@ _attempting to deploy from account 0xa0D179f21B5F22a9b4ac54bCbd2FeCc50Ba0a00F_
 _Contract deployed to 0x5a3F507b01c3604B56f08472bF4fC520dCEfcc53_
 
 **Lecture 181: CampaignShow's getInitialProps**
-cd../
+
 Update factory.js file with the new contract address
 console.log doesn't immediately show the result on the Dev Tool area of the browser, but shows it on the Terminal window. To have the result shown on the Dev Tool window, we will have to click on the home link and then click again on the campaign.
+
+**Lecture 182: Accessing a Campaign**
+
+Create a function that would receive an address (i.e. the result of props.query.address), then use that address to create a new contract and then return it to the function. Create a file called campaign.js and place within the ethereum folder. Import it on show.js (line 3), then modify the codes (lines 11 to 17).

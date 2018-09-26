@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Card } from "semantic-ui-react";
 import Layout from "../../components/Layout";
 import Campaign from "../../ethereum/campaign";
+import web3 from "../../ethereum/web3"; // Lecture 185
 
 class CampaignShow extends Component {
   // NOTE: we are concerned about one VERY PARTICULAR campaign
@@ -36,11 +37,40 @@ class CampaignShow extends Component {
 
     const items = [
       {
+        // card for manager address
         header: manager,
         meta: "Address of Manager",
         description:
           "The manager created this campaign and can create requests to withdraw funds.",
         style: { overflowWrap: "break-word" } // constrains the width for each value
+      },
+      {
+        // card for minimum contribution
+        header: minimumContribution,
+        meta: "Minimum Contribution (wei)",
+        description:
+          "You must contribute at least this much wei to become an approver"
+      },
+      {
+        // card for requestsCount
+        header: requestsCount,
+        meta: "Number of Requests",
+        description:
+          "A request tries to withdraw funds from the contract. Requests must be approved by the approvers."
+      },
+      {
+        // card for approversCount
+        header: approversCount,
+        meta: "Number of Approvers",
+        description:
+          "Number of people who have already donated to this campaign."
+      },
+      {
+        // card for current balance (donations)
+        header: web3.utils.fromWei(balance, "ether"), // convert balance into ether
+        meta: "Campaign Balance (ether)",
+        description:
+          "The Balance shows how much money this campaign has left to spend."
       }
     ];
 

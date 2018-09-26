@@ -886,3 +886,7 @@ Next step -> Make sure that we can _return_ the values separately from within th
 **Lecture 184: Custom Card Croups**
 
 Within CampaignShow component (inside show.js), create a renderCards() method to show up each Object on its own box using Card View.
+
+**Lecture 185: One Card Per Property**
+
+Use web3 library to convert values from wei into ether.

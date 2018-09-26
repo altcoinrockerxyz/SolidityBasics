@@ -898,3 +898,7 @@ Make the contribute form available in various pages by making it into a generall
 **Lecture 187: Grid Layouts**
 
 _show.js lines 86 to 92 and import Grid component at the boilerplate header_
+
+**Lecture 188: Form State**
+
+Anytime a user inputs a valid value on the Contribute form, the Contribute function gets executed. Store input value unto our State Object.

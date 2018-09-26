@@ -39,36 +39,67 @@ var ContributeForm = function (_Component) {
   (0, _inherits3.default)(ContributeForm, _Component);
 
   function ContributeForm() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     (0, _classCallCheck3.default)(this, ContributeForm);
 
-    return (0, _possibleConstructorReturn3.default)(this, (ContributeForm.__proto__ || (0, _getPrototypeOf2.default)(ContributeForm)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = ContributeForm.__proto__ || (0, _getPrototypeOf2.default)(ContributeForm)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      value: ""
+    }, _this.onSubmit = function (event) {
+      event.preventDefault(); // keep the form from attempting to submit itself
+
+      // Lecture 189
+      // all the same exact logic we did on the last form
+      // loading spinner
+      // take campaign contract and attempt to send money to it.
+    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
+
+  // make the onSubmit function
+
 
   (0, _createClass3.default)(ContributeForm, [{
     key: "render",
+
+    // no () at onSubmit within the Form tag, we dont wanna call it at render time
+    // but a reference to the function so we can call it sometime in the future
     value: function render() {
-      return _react2.default.createElement(_semanticUiReact.Form, {
-        __source: {
+      var _this2 = this;
+
+      return _react2.default.createElement(_semanticUiReact.Form, { onSubmit: this.onSubmit, __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 23
         }
       }, _react2.default.createElement(_semanticUiReact.Form.Field, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 24
         }
       }, _react2.default.createElement("label", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 25
         }
-      }, "Amount to Contribute"), _react2.default.createElement("input", { label: "ether", labelPosition: "right", __source: {
+      }, "Amount to Contribute"), _react2.default.createElement(_semanticUiReact.Input, {
+        value: this.state.value,
+        onChange: function onChange(event) {
+          return _this2.setState({ value: event.target.value });
+        },
+        label: "ether",
+        labelPosition: "right",
+        __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 26
         }
       })), _react2.default.createElement(_semanticUiReact.Button, { primary: true, __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 33
         }
       }, "Contribute!"));
     }
@@ -78,4 +109,4 @@ var ContributeForm = function (_Component) {
 }(_react.Component);
 
 exports.default = ContributeForm;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvQ29udHJpYnV0ZUZvcm0uanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJGb3JtIiwiSW5wdXQiLCJNZXNzYWdlIiwiQnV0dG9uIiwiQ29udHJpYnV0ZUZvcm0iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBUyxBQUFNLEFBQU8sQUFBUzs7OztvR0FEVzs7O0ksQUFHcEM7Ozs7Ozs7Ozs7OzZCQUNLLEFBQ1A7NkJBQ0UsQUFBQzs7b0JBQUQ7c0JBQUEsQUFDRTtBQURGO0FBQUEsT0FBQSxrQkFDRyxjQUFELHNCQUFBLEFBQU07O29CQUFOO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQURGLEFBQ0UsQUFDQSxrRUFBTyxPQUFQLEFBQWEsU0FBUSxlQUFyQixBQUFtQztvQkFBbkM7c0JBSEosQUFDRSxBQUVFLEFBRUY7QUFGRTsyQkFFRixBQUFDLHlDQUFPLFNBQVI7b0JBQUE7c0JBQUE7QUFBQTtTQU5KLEFBQ0UsQUFLRSxBQUdMOzs7OztBQVgwQixBLEFBYzdCOztrQkFBQSxBQUFlIiwiZmlsZSI6IkNvbnRyaWJ1dGVGb3JtLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9icm93bmZpc2gvZ2l0aHViL1NvbGlkaXR5QmFzaWNzL2tpY2tzdGFydCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvQ29udHJpYnV0ZUZvcm0uanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJGb3JtIiwiSW5wdXQiLCJNZXNzYWdlIiwiQnV0dG9uIiwiQ29udHJpYnV0ZUZvcm0iLCJzdGF0ZSIsInZhbHVlIiwib25TdWJtaXQiLCJldmVudCIsInByZXZlbnREZWZhdWx0Iiwic2V0U3RhdGUiLCJ0YXJnZXQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQSxBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFTLEFBQU0sQUFBTyxBQUFTOzs7O29HQURXOzs7SUFHcEMsQTs7Ozs7Ozs7Ozs7Ozs7NE5BQ0osQTthQUNTLEEsQUFERDtBQUFBLEFBQ04sYSxBQUlGLFdBQVc7WUFBUyxBQUNsQixBQUFNLGlCQURZLEFBQ2xCLENBQXdCLEFBRXhCOztBQUNBO0FBQ0E7QUFDQTtBQUNEO0E7QUFSRDs7Ozs7O1NBVUE7O0FBQ0E7OzZCQUNTO21CQUNQOzs2QkFDRSxBQUFDLHVDQUFLLFVBQVUsS0FBaEIsQUFBcUI7b0JBQXJCO3NCQUFBLEFBQ0U7QUFERjtPQUFBLGtCQUNHLGNBQUQsc0JBQUEsQUFBTTs7b0JBQU47c0JBQUEsQUFDRTtBQURGO0FBQUEseUJBQ0UsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBREYsQUFDRSxBQUNBLHlDQUFBLEFBQUM7ZUFDUSxLQUFBLEFBQUssTUFEZCxBQUNvQixBQUNsQjtrQkFBVSx5QkFBQTtpQkFBUyxPQUFBLEFBQUssU0FBUyxFQUFFLE9BQU8sTUFBQSxBQUFNLE9BQXRDLEFBQVMsQUFBYyxBQUFzQjtBQUZ6RCxBQUdFO2VBSEYsQUFHUSxBQUNOO3VCQUpGLEFBSWdCOztvQkFKaEI7c0JBSEosQUFDRSxBQUVFLEFBT0Y7QUFQRTtBQUNFLDJCQU1KLEFBQUMseUNBQU8sU0FBUjtvQkFBQTtzQkFBQTtBQUFBO1NBWEosQUFDRSxBQVVFLEFBR0w7Ozs7O0FBaEMwQixBLEFBbUM3Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJDb250cmlidXRlRm9ybS5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvYnJvd25maXNoL2dpdGh1Yi9Tb2xpZGl0eUJhc2ljcy9raWNrc3RhcnQifQ==

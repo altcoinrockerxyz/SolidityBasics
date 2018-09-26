@@ -910,3 +910,9 @@ _How to pass the campaign address into the ContributeForm component._
 Note: getInitialProps is not a part of our actual component instance. So even though getInitialProps knows about the campaign address, the rest of the methods inside show.js -- which actually belong to the component instance -- don't know about the address.. that's why we have to specifically _return_ the address as part of all the returned Object values.
 
 This process allows the ContributeForm.js to have access to this.props.address variable.
+
+**Lecture 190: Making a Contribution**
+
+The campaign instance is now available inside our onSubmit function. Next thing to do is to get a list of our accounts and call a contribute function on our campaign.
+
+Note: Anytime we want to call a function, always WRAP IT on a Try-Catch statement. This makes sure we handle any message appropriately.

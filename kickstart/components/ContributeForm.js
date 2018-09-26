@@ -1,6 +1,7 @@
 import React, { Component } from "react"; // boilerplate components
 import { Form, Input, Message, Button } from "semantic-ui-react";
-import Campaign from "../../ethereum/campaign";
+import Campaign from "../ethereum/campaign";
+import web3 from "../ethereum/web3";
 
 class ContributeForm extends Component {
   state = {
@@ -8,7 +9,7 @@ class ContributeForm extends Component {
   };
 
   // make the onSubmit function
-  onSubmit = event => {
+  onSubmit = async event => {
     event.preventDefault(); // keep the form from attempting to submit itself
 
     // Lecture 189
@@ -18,6 +19,15 @@ class ContributeForm extends Component {
 
     // campaign is Campaign with passed in address
     const campaign = Campaign(this.props.address);
+
+    try {
+      const accounts = await web3.eth.getAccounts(); // place async at event on onSubmit
+      await campaign.methods.contribute().send({
+        // call the contribute function
+        from: accounts[0],
+        value: web3.utils.toWei(this.state.value, "ether") // value will be entered in ether but we have to convert to wei
+      });
+    } catch (err) {}
   };
 
   // no () at onSubmit within the Form tag, we dont wanna call it at render time

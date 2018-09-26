@@ -890,3 +890,7 @@ Within CampaignShow component (inside show.js), create a renderCards() method to
 **Lecture 185: One Card Per Property**
 
 Use web3 library to convert values from wei into ether.
+
+**Lecture 186: The Contribute Form**
+
+Make the contribute form available in various pages by making it into a generally accessible component.

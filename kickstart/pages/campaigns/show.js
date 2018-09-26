@@ -11,13 +11,17 @@ class CampaignShow extends Component {
     // a separate props object of its own
     // console.log(props.query.address); // this is the token we have on the URL
     // call to the Campaign function
-    const campaign = Campaign(props.query.address);
+    const campaign = Campaign(props.query.address); // Lecture 189: Take this address
+    // and add it to the Object that gets returned (line 21) from getInitialProps
+    // code goes to line 23, then
+    // tell the contributeForm the active address (line 94).
 
     const summary = await campaign.methods.getSummary().call();
 
     console.log(summary);
 
     return {
+      address: props.query.address,
       balance: summary[0],
       minimumContribution: summary[1],
       requestsCount: summary[2],
@@ -87,7 +91,7 @@ class CampaignShow extends Component {
           <Grid.Column width={10}>{this.renderCards()}</Grid.Column>
 
           <Grid.Column width={6}>
-            <ContributeForm />
+            <ContributeForm address={this.props.address} />
           </Grid.Column>
         </Grid>
       </Layout>

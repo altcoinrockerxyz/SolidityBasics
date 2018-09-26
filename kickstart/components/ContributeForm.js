@@ -1,5 +1,6 @@
 import React, { Component } from "react"; // boilerplate components
 import { Form, Input, Message, Button } from "semantic-ui-react";
+import Campaign from "../../ethereum/campaign";
 
 class ContributeForm extends Component {
   state = {
@@ -14,6 +15,9 @@ class ContributeForm extends Component {
     // all the same exact logic we did on the last form
     // loading spinner
     // take campaign contract and attempt to send money to it.
+
+    // campaign is Campaign with passed in address
+    const campaign = Campaign(this.props.address);
   };
 
   // no () at onSubmit within the Form tag, we dont wanna call it at render time

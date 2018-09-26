@@ -902,3 +902,11 @@ _show.js lines 86 to 92 and import Grid component at the boilerplate header_
 **Lecture 188: Form State**
 
 Anytime a user inputs a valid value on the Contribute form, the Contribute function gets executed. Store input value unto our State Object.
+
+**Lecture 189: Communicating the Campaign Address**
+
+_How to pass the campaign address into the ContributeForm component._
+
+Note: getInitialProps is not a part of our actual component instance. So even though getInitialProps knows about the campaign address, the rest of the methods inside show.js -- which actually belong to the component instance -- don't know about the address.. that's why we have to specifically _return_ the address as part of all the returned Object values.
+
+This process allows the ContributeForm.js to have access to this.props.address variable.

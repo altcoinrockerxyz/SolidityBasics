@@ -36,6 +36,8 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _semanticUiReact = require("semantic-ui-react");
+
 var _Layout = require("../../components/Layout");
 
 var _Layout2 = _interopRequireDefault(_Layout);
@@ -59,19 +61,46 @@ var CampaignShow = function (_Component) {
   }
 
   (0, _createClass3.default)(CampaignShow, [{
+    key: "renderCards",
+    value: function renderCards() {
+      // destructure
+      var _props = this.props,
+          balance = _props.balance,
+          manager = _props.manager,
+          minimumContribution = _props.minimumContribution,
+          requestsCount = _props.requestsCount,
+          approversCount = _props.approversCount;
+
+      var items = [{
+        header: manager,
+        meta: "Address of Manager",
+        description: "The manager created this campaign and can create requests to withdraw funds.",
+        style: { overflowWrap: "break-word" // constrains the width for each value
+        } }];
+
+      return _react2.default.createElement(_semanticUiReact.Card.Group, { items: items, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        }
+      });
+    }
+
+    // Lecture184: Make sure to call the renderCards function from within the render method.
+
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(_Layout2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 53
         }
       }, _react2.default.createElement("h3", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 54
         }
-      }, "Campaign Show"));
+      }, "Campaign Show"), this.renderCards());
     }
   }], [{
     key: "getInitialProps",
@@ -96,7 +125,13 @@ var CampaignShow = function (_Component) {
 
                 console.log(summary);
 
-                return _context.abrupt("return", {});
+                return _context.abrupt("return", {
+                  balance: summary[0],
+                  minimumContribution: summary[1],
+                  requestsCount: summary[2],
+                  approversCount: summary[3],
+                  manager: summary[4]
+                });
 
               case 6:
               case "end":
@@ -118,4 +153,4 @@ var CampaignShow = function (_Component) {
 }(_react.Component);
 
 exports.default = CampaignShow;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2NhbXBhaWducy9zaG93LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiTGF5b3V0IiwiQ2FtcGFpZ24iLCJDYW1wYWlnblNob3ciLCJwcm9wcyIsImNhbXBhaWduIiwicXVlcnkiLCJhZGRyZXNzIiwibWV0aG9kcyIsImdldFN1bW1hcnkiLCJjYWxsIiwic3VtbWFyeSIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBTyxBQUFZOzs7O0FBQ25CLEFBQU8sQUFBYzs7Ozs7Ozs7O0lBRWYsQTs7Ozs7Ozs7Ozs7NkJBY0ssQUFDUDs2QkFDRSxBQUFDOztvQkFBRDtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQUZKLEFBQ0UsQUFDRSxBQUdMOzs7U0FuQkQ7Ozs7MkcsQUFDNkI7Ozs7O21CQUMzQjtBQUNBO0FBQ0E7QUFDTTtBLDJCQUFXLHdCQUFTLE1BQUEsQUFBTSxNQUFmLEFBQXFCLEE7O3VCQUVoQixTQUFBLEFBQVMsUUFBVCxBQUFpQixhQUFqQixBQUE4QixBOzttQkFBOUM7QSxtQ0FFTjs7d0JBQUEsQUFBUSxJQUFSLEFBQVk7O2lEQUVMLEE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFaZ0IsQSxBQXVCM0I7O2tCQUFBLEFBQWUiLCJmaWxlIjoic2hvdy5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvYnJvd25maXNoL2dpdGh1Yi9Tb2xpZGl0eUJhc2ljcy9raWNrc3RhcnQifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2NhbXBhaWducy9zaG93LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkxheW91dCIsIkNhbXBhaWduIiwiQ2FtcGFpZ25TaG93IiwicHJvcHMiLCJiYWxhbmNlIiwibWFuYWdlciIsIm1pbmltdW1Db250cmlidXRpb24iLCJyZXF1ZXN0c0NvdW50IiwiYXBwcm92ZXJzQ291bnQiLCJpdGVtcyIsImhlYWRlciIsIm1ldGEiLCJkZXNjcmlwdGlvbiIsInN0eWxlIiwib3ZlcmZsb3dXcmFwIiwicmVuZGVyQ2FyZHMiLCJjYW1wYWlnbiIsInF1ZXJ5IiwiYWRkcmVzcyIsIm1ldGhvZHMiLCJnZXRTdW1tYXJ5IiwiY2FsbCIsInN1bW1hcnkiLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVM7O0FBQ1QsQUFBTyxBQUFZOzs7O0FBQ25CLEFBQU8sQUFBYzs7Ozs7Ozs7O0ksQUFFZjs7Ozs7Ozs7Ozs7a0NBcUJVLEFBQ1o7QUFEWTttQkFRUixLQVJRLEFBUUg7VUFSRyxBQUdWLGlCQUhVLEFBR1Y7VUFIVSxBQUlWLGlCQUpVLEFBSVY7VUFKVSxBQUtWLDZCQUxVLEFBS1Y7VUFMVSxBQU1WLHVCQU5VLEFBTVY7VUFOVSxBQU9WLHdCQVBVLEFBT1YsQUFHRjs7VUFBTTtnQkFDSixBQUNVLEFBQ1I7Y0FGRixBQUVRLEFBQ047cUJBSEYsQUFJSSxBQUNGO2lCQUFTLGNBQUYsQUFBZ0IsYUFOM0IsQUFBYyxBQUNaLEFBS1MsQUFBK0IsQUFJMUM7QUFKVyxTQUxULEFBQ0UsRUFGVTs7MkNBVVAsQUFBQyxzQkFBRCxBQUFNLFNBQU0sT0FBWixBQUFtQjtvQkFBbkI7c0JBQVAsQUFBTyxBQUNSO0FBRFE7T0FBQTtBQUdUOzs7Ozs7NkJBQ1MsQUFDUDs2QkFDRSxBQUFDOztvQkFBRDtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQURGLEFBQ0UsQUFDQyx1QkFITCxBQUNFLEFBRUcsQUFBSyxBQUdYOzs7U0FuREQ7Ozs7MkcsQUFDNkI7Ozs7O21CQUMzQjtBQUNBO0FBQ0E7QUFDTTtBLDJCQUFXLHdCQUFTLE1BQUEsQUFBTSxNQUFmLEFBQXFCLEE7O3VCQUVoQixTQUFBLEFBQVMsUUFBVCxBQUFpQixhLEFBQWpCLEFBQThCOzttQkFBOUM7QSxtQ0FFTjs7d0JBQUEsQUFBUSxJQUFSLEFBQVk7OzsyQkFHRCxRQURKLEFBQ0ksQUFBUSxBQUNqQjt1Q0FBcUIsUUFGaEIsQUFFZ0IsQUFBUSxBQUM3QjtpQ0FBZSxRQUhWLEFBR1UsQUFBUSxBQUN2QjtrQ0FBZ0IsUUFKWCxBQUlXLEFBQVEsQUFDeEI7MkJBQVMsUUFBQSxBLEFBTEosQUFLWTtBQUxaLEFBQ0w7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFicUIsQSxBQXVEM0I7O2tCQUFBLEFBQWUiLCJmaWxlIjoic2hvdy5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvYnJvd25maXNoL2dpdGh1Yi9Tb2xpZGl0eUJhc2ljcy9raWNrc3RhcnQifQ==

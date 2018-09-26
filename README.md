@@ -874,3 +874,15 @@ console.log doesn't immediately show the result on the Dev Tool area of the brow
 **Lecture 182: Accessing a Campaign**
 
 Create a function that would receive an address (i.e. the result of props.query.address), then use that address to create a new contract and then return it to the function. Create a file called campaign.js and place within the ethereum folder. Import it on show.js (line 3), then modify the codes (lines 11 to 17).
+
+**Lecture 183: Summary Translation Layer**
+
+The result may look like an array, but it is NOT. It is an Object.
+
+_Anytime that we call a function from a contract that returns multiple values, we get back an Object - NOT an array._
+
+Next step -> Make sure that we can _return_ the values separately from within the _Show dot JS_ file. To present each value found within the Object, we will have to represent the Object in the same way values in an Array are shown (by using square brackets '[]').
+
+**Lecture 184: Custom Card Croups**
+
+Within CampaignShow component (inside show.js), create a renderCards() method to show up each Object on its own box using Card View.

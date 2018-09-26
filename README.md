@@ -893,4 +893,8 @@ Use web3 library to convert values from wei into ether.
 
 **Lecture 186: The Contribute Form**
 
-Make the contribute form available in various pages by making it into a generally accessible component.
+Make the contribute form available in various pages by making it into a generally accessible component (Use Semantic UI components).
+
+**Lecture 187: Grid Layouts**
+
+_show.js lines 86 to 92 and import Grid component at the boilerplate header_

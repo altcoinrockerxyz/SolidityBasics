@@ -945,3 +945,7 @@ View Requests Button Mockup: https://imgur.com/d5vxdpD
 Add Requests Form: https://imgur.com/uhnW2am
 
 _NOTE: Restart server whenever we change our routes files_
+
+**Lecture 196: Request Creation Form**
+
+Sort out the new.js file within the requests folder so it could accept input values and pass them unto the contract address being viewed by the user.

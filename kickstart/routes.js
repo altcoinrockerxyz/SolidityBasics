@@ -4,9 +4,12 @@ const routes = require("next-routes")();
 routes
 
   .add("/campaigns/new", "/campaigns/new")
-  .add("/campaigns/:address", "/campaigns/show"); // use a wildcard by placing a colon
-// before the name of the wildcard property (variable of sorts)
-// second arg presents which route will be shown
+  .add("/campaigns/:address", "/campaigns/show") // use a wildcard by placing a colon
+  // before the name of the wildcard property (variable of sorts)
+  // second arg presents which route will be shown
+
+  // Lecture 193 - add a new route for requests
+  .add("/campaigns/:address/requests", "/campaigns/requests/index");
 
 // routes.add('...','...');
 

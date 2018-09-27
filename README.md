@@ -926,3 +926,12 @@ To do so, we have to make use of our _router object_ to just refresh the route w
 **Lecture 192: Spinners and Error Handlers**
 
 Add the spinner property on the Button, and the Error Handler Message via the catch(err)
+
+**Lecture 193: Listing Requests**
+
+Work on the View Requests Button
+Define the View Requests route from within the pages/campaigns/requests directory (create it)
+Create two files within requests directory:
+
+- index.js to show a list of all requests
+-

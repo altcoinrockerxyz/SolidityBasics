@@ -8,8 +8,11 @@ routes
   // before the name of the wildcard property (variable of sorts)
   // second arg presents which route will be shown
 
-  // Lecture 193 - add a new route for requests
-  .add("/campaigns/:address/requests", "/campaigns/requests/index");
+  // Lecture 193 - add a new route for list of requests
+  .add("/campaigns/:address/requests", "/campaigns/requests/index")
+
+  // Lecture 195 - route for Add New Request
+  .add("/campaigns/:address/requests/new", "/campaigns/requests/new");
 
 // routes.add('...','...');
 

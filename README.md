@@ -933,5 +933,15 @@ Work on the View Requests Button
 Define the View Requests route from within the pages/campaigns/requests directory (create it)
 Create two files within requests directory:
 
-- index.js to show a list of all requests
--
+- File 1: index.js to show a list of all requests
+
+**Lecture 194: Grids vs Columns**
+
+Usage of the <Grid.Row> tag
+
+**Lecture 195: More Routing**
+
+View Requests Button Mockup: https://imgur.com/d5vxdpD
+Add Requests Form: https://imgur.com/uhnW2am
+
+_NOTE: Restart server whenever we change our routes files_

@@ -22,12 +22,33 @@ class RequestNew extends Component {
     return { address };
   }
 
+  // Lecture 197: Wire Up onSubmit function to the corresponding form via render()
+  onSubmit = async event => {
+    event.preventDefault();
+
+    // 1. Get a reference to our campaign instacne by using our address
+    const campaign = Campaign(this.props.address);
+    const { description, value, recipient } = this.state;
+    // 2. Setup a Try-Catch
+    try {
+      const accounts = await web3.eth.getAccounts();
+
+      // make sure the passed in value is in wei
+      await campaign.methods
+        .createRequest(description, web3.utils.toWei(value, "ether"), recipient)
+        .send({ from: accounts[0] });
+    } catch (err) {}
+
+    // 3. Call a function on the campaign
+  };
+
   // three separate form fields
+  // define onSubmit handler
   render() {
     return (
       <Layout>
         <h3>Create a Request</h3>
-        <Form>
+        <Form onSubmit={this.onSubmit}>
           <Form.Field>
             <label>Description</label>
             <Input

@@ -949,3 +949,7 @@ _NOTE: Restart server whenever we change our routes files_
 **Lecture 196: Request Creation Form**
 
 Sort out the new.js file within the requests folder so it could accept input values and pass them unto the contract address being viewed by the user.
+
+**Lecture 197: Creating a Request**
+
+Sort out the onSubmit function within campaigns/requests/new.js to pass on the three inputs via the Create form.

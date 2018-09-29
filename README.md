@@ -977,3 +977,11 @@ We need to do ONE CALL to get all requests
 
 1.  Get the total number of requests, and
 2.  retrieve them one-by-one (via a loop)
+
+**Lecture 201: Fancy Javascript**
+
+Returning an Array of Struct is not supported by Solidity, so to be able to still get the array of struct as a result via one Solidity call, we have to make use of some JavaScripting (requests/index.js lines 12 to 32).
+
+**Lecture 202: The Need for parseInt()**
+
+Issuing a call to retrieve the value of getRequestsCount will return a String, so a parseInt is needed to convert the string into a number before calling the struct into an array function (requests/index.js line 27).

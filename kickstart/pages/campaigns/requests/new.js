@@ -11,7 +11,9 @@ class RequestNew extends Component {
   state = {
     value: "",
     description: "",
-    recipient: ""
+    recipient: "",
+    loading: false,
+    errorMessage: ""
   };
 
   // get access to the address the user is currently looking at inside the URL
@@ -29,6 +31,8 @@ class RequestNew extends Component {
     // 1. Get a reference to our campaign instacne by using our address
     const campaign = Campaign(this.props.address);
     const { description, value, recipient } = this.state;
+
+    this.setState({ loading: true, errorMessage: "" }); // Lecture 198
     // 2. Setup a Try-Catch
     try {
       const accounts = await web3.eth.getAccounts();
@@ -37,8 +41,14 @@ class RequestNew extends Component {
       await campaign.methods
         .createRequest(description, web3.utils.toWei(value, "ether"), recipient)
         .send({ from: accounts[0] });
-    } catch (err) {}
 
+      // L198: send back to list of requests
+      Router.pushRoute(`/campaigns/${this.props.address}/requests`);
+    } catch (err) {
+      this.setState({ errorMessage: err.message.split("\n")[0] }); // L198
+    }
+
+    this.setState({ loading: false });
     // 3. Call a function on the campaign
   };
 
@@ -47,8 +57,11 @@ class RequestNew extends Component {
   render() {
     return (
       <Layout>
+        <Link route={`/campaigns/${this.props.address}/requests`}>
+          <a>Back</a>
+        </Link>
         <h3>Create a Request</h3>
-        <Form onSubmit={this.onSubmit}>
+        <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
           <Form.Field>
             <label>Description</label>
             <Input
@@ -74,7 +87,11 @@ class RequestNew extends Component {
               }
             />
           </Form.Field>
-          <Button primary>Create!</Button>
+
+          <Message error header="Oops!" content={this.state.errorMessage} />
+          <Button primary loading={this.state.loading}>
+            Create!
+          </Button>
         </Form>
       </Layout>
     );

@@ -953,3 +953,8 @@ Sort out the new.js file within the requests folder so it could accept input val
 **Lecture 197: Creating a Request**
 
 Sort out the onSubmit function within campaigns/requests/new.js to pass on the three inputs via the Create form.
+
+**Lecture 198: Form Polish**
+
+Add Error Message handler and Button spinner.
+Add a Link Back to List of Requests.

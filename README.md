@@ -941,7 +941,7 @@ Usage of the <Grid.Row> tag
 
 **Lecture 195: More Routing**
 
-View Requests Button Mockup: https://imgur.com/d5vxdpD
+View Requests Mockup: https://imgur.com/d5vxdpD
 Add Requests Form: https://imgur.com/uhnW2am
 
 _NOTE: Restart server whenever we change our routes files_
@@ -958,3 +958,22 @@ Sort out the onSubmit function within campaigns/requests/new.js to pass on the t
 
 Add Error Message handler and Button spinner.
 Add a Link Back to List of Requests.
+
+**Lecture 199: Creating a Request**
+
+Create a new request by using the live form.
+
+**Lecture 200: Requests One by One**
+
+View Requests Mockup: https://imgur.com/d5vxdpD
+
+An Add Request button at the top right area
+A list of all requests in tabulated (struct) form
+A Counter of all existing requests at the bottom left area
+
+_PROBLEM: Solidity do not currently have support for returning Arrays of Structs_
+
+We need to do ONE CALL to get all requests
+
+1.  Get the total number of requests, and
+2.  retrieve them one-by-one (via a loop)

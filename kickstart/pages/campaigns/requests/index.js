@@ -3,6 +3,7 @@ import Layout from "../../../components/Layout"; // Lecture 195
 import { Button, Table } from "semantic-ui-react"; // Lecture 195, 203
 import { Link } from "../../../routes"; // Link helper via Lecture 195
 import Campaign from "../../../ethereum/campaign";
+import RequestRow from "../../../components/RequestRow";
 
 // List Requests
 class RequestIndex extends Component {
@@ -35,6 +36,19 @@ class RequestIndex extends Component {
 
     return { address, requests, requestCount }; // ES2015 syntax for address:address
   }
+
+  // L204: create a helper method to iterate over our list of requests, and for each, return a request row.
+  renderRows() {
+    return this.props.requests.map((request, index) => {
+      return (
+        <RequestRow
+          key={index} // NOTE: part of React, pass a key whenever we are rendering a list of components
+          request={request}
+          address={this.props.address}
+        />
+      ); // return one new requestRow with a couple of properties (props)
+    });
+  }
   render() {
     // L203: use ES2015 destructuring to shorten the process of creating table tags
     const { Header, Row, HeaderCell, Body } = Table;
@@ -59,6 +73,7 @@ class RequestIndex extends Component {
               <HeaderCell>Finalize</HeaderCell>
             </Row>
           </Header>
+          <Body>{this.renderRows()}</Body>
         </Table>
       </Layout>
     );

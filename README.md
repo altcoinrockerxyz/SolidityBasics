@@ -992,3 +992,7 @@ Display the list of requests on the screen as a table by:
 
 - Using Semantic UI React > Collections > Table
 - Using ES2015 to shorten process of creating table cell values (requests/index.js lines 39 to 59)
+
+**Lecture 204: Request Row Component**
+
+Render the list of requests via some logics for each row. Rather than placing all the logic for rendering one individual row into the request/index component, we instead make a new component called RequestRow. This will also contain helper methods for handling a user clicking in either Approve or Finalize buttons.

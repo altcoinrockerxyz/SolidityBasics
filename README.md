@@ -1011,3 +1011,12 @@ Approvers tied to a request is stored inside our _request struct_
 
 Create An Approve Button using Semantic UI.
 Add a click-event handler that runs a helper function to call this.onApprove (RequestRow.js line 10 to 18)
+
+**Lecture 208: Finalizing Requests**
+
+Create a Finalize Button to send out the money to recipient.
+Note: Codes are very similar with Lecture 207
+
+**Lecture 209: Testing Finalization**
+
+Figure out some notification system and error handlers.

@@ -17,6 +17,16 @@ class RequestRow extends Component {
     });
   };
 
+  // L208
+  onFinalize = async () => {
+    const campaign = Campaign(this.props.address);
+
+    const accounts = await web3.eth.getAccounts();
+    await campaign.methods.finalizeRequest(this.props.id).send({
+      from: accounts[0]
+    });
+  };
+
   render() {
     // destructure the actual components of the table that we need (row and cell)
     const { Row, Cell } = Table;
@@ -38,6 +48,11 @@ class RequestRow extends Component {
         <Cell>
           <Button color="green" basic onClick={this.onApprove}>
             Approve
+          </Button>
+        </Cell>
+        <Cell>
+          <Button color="teal" basic onClick={this.onFinalize}>
+            Finalize
           </Button>
         </Cell>
       </Row>

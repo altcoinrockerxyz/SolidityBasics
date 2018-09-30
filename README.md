@@ -996,3 +996,7 @@ Display the list of requests on the screen as a table by:
 **Lecture 204: Request Row Component**
 
 Render the list of requests via some logics for each row. Rather than placing all the logic for rendering one individual row into the request/index component, we instead make a new component called RequestRow. This will also contain helper methods for handling a user clicking in either Approve or Finalize buttons.
+
+**Lecture 205: Request Row Content**
+
+Use some destructuring for table tags and this.props

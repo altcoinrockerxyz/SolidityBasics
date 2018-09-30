@@ -1033,3 +1033,12 @@ Add a flag that would show if a request is ready to be finalized (needs total nu
 
 Get the Add Request button to move to the right (index.js line 71)
 Print out the total number of requests at the bottom of the screen
+
+**Lecture 212: Wrap Up**
+
+What we've accomplished:
+
+1.  Create Campaigns
+2.  View Individual Campaigns and get some details about them
+3.  Users can Create, View Requests, and Disperse Money tied to an individual campaign
+4.  Users can easily see the status of each of the Requests

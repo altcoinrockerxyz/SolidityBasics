@@ -1028,3 +1028,8 @@ Mark a request as complete or finalized by (1) hiding the buttons and
 (2) graying out the row --> <Row disabled=request.complete>
 
 Add a flag that would show if a request is ready to be finalized (needs total number of approvers tied to request)
+
+**Lecture 211: Finishing Requests Index**
+
+Get the Add Request button to move to the right (index.js line 71)
+Print out the total number of requests at the bottom of the screen

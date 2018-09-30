@@ -17,6 +17,10 @@ class RequestIndex extends Component {
     // Step 2: Issue a call to getRequestsCount
     const requestCount = await campaign.methods.getRequestsCount().call();
 
+    // L206: Reuse this getInitialProps function for RequestRow
+    // by making an additional call to pull out the total number of approvers
+    const approversCount = await campaign.methods.approversCount().call();
+
     // NOTE: L202: Passed value to requestCount ends up as a String
     // so it needs a parseInt() to work
 
@@ -34,18 +38,23 @@ class RequestIndex extends Component {
 
     console.log(requests);
 
-    return { address, requests, requestCount }; // ES2015 syntax for address:address
+    // L206: Pass the value into the object that eventually
+    // gets added to the props of our component
+    return { address, requests, requestCount, approversCount }; // ES2015 syntax for address:address
   }
 
   // L204: create a helper method to iterate over our list of requests, and for each, return a request row.
   renderRows() {
     return this.props.requests.map((request, index) => {
+      // L206: Make sure the approversCount gets communicated
+      // from the over-all component down to request row
       return (
         <RequestRow
           key={index} // NOTE: part of React, pass a key whenever we are rendering a list of components
           id={index} // The value to be placed as a value's ID
           request={request}
           address={this.props.address}
+          approversCount={this.props.approversCount}
         />
       ); // return one new requestRow with a couple of properties (props)
     });

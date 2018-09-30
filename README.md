@@ -1000,3 +1000,9 @@ Render the list of requests via some logics for each row. Rather than placing al
 **Lecture 205: Request Row Content**
 
 Use some destructuring for table tags and this.props
+
+**Lecture 206: Approvers Count Cell**
+
+Two values should be shown (number of people who already approved, and total approvers).
+
+Approvers tied to a request is stored inside our _request struct_

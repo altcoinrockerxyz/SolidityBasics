@@ -24,7 +24,7 @@ contract Campaign {
         uint value;
         address recipient;
         bool complete;
-        uint approvalCount; // keeps track of the YES votes
+        uint approvalCount; // keeps track of the YES votes; L206: Display on Requests Row
         mapping(address => bool) approvals; // the ones who are allowed to approve
     }
 
@@ -36,7 +36,7 @@ contract Campaign {
 
     mapping(address => bool) public approvers; // label variable as approvers
 
-    uint public approversCount;
+    uint public approversCount; // <-- L206: fetch this to display in the requests table
 
     modifier restricted() {
         require(msg.sender == manager);

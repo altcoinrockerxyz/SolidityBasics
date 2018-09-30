@@ -34,10 +34,18 @@ class RequestRow extends Component {
     // destructure this.props to shorten returned values
     const { id, request, approversCount } = this.props;
 
+    // L210: Add a flag for rows ready to be finalized
+    // will look to total number of approvers tied to the request
+    const readyToFinalize = request.approvalCount > approversCount / 2;
+    // THEN add one additional prop to ROW component
+
     // L206: The total number of approvers is tied to the campaign contract,
     // NOT in individual requests
     return (
-      <Row>
+      <Row
+        disabled={request.complete}
+        positive={readyToFinalize && !request.complete}
+      >
         <Cell>{id}</Cell>
         <Cell>{request.description}</Cell>
         <Cell>{web3.utils.fromWei(request.value, "ether")}</Cell>
@@ -46,14 +54,18 @@ class RequestRow extends Component {
           {request.approvalCount} / {approversCount}
         </Cell>
         <Cell>
-          <Button color="green" basic onClick={this.onApprove}>
-            Approve
-          </Button>
+          {request.complete ? null : ( // if request.complete is true, then hide, else show
+            <Button color="green" basic onClick={this.onApprove}>
+              Approve
+            </Button>
+          )}
         </Cell>
         <Cell>
-          <Button color="teal" basic onClick={this.onFinalize}>
-            Finalize
-          </Button>
+          {request.complete ? null : (
+            <Button color="teal" basic onClick={this.onFinalize}>
+              Finalize
+            </Button>
+          )}
         </Cell>
       </Row>
     );

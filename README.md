@@ -1020,3 +1020,11 @@ Note: Codes are very similar with Lecture 207
 **Lecture 209: Testing Finalization**
 
 Figure out some notification system and error handlers.
+
+**Lecture 210: Row Status Styling**
+
+Add some CSS styling to show whether a request got finalized.
+Mark a request as complete or finalized by (1) hiding the buttons and
+(2) graying out the row --> <Row disabled=request.complete>
+
+Add a flag that would show if a request is ready to be finalized (needs total number of approvers tied to request)

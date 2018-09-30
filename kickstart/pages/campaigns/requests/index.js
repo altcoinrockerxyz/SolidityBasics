@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Layout from "../../../components/Layout"; // Lecture 195
-import { Button } from "semantic-ui-react"; // Lecture 195
+import { Button, Table } from "semantic-ui-react"; // Lecture 195, 203
 import { Link } from "../../../routes"; // Link helper via Lecture 195
 import Campaign from "../../../ethereum/campaign";
 
@@ -36,6 +36,9 @@ class RequestIndex extends Component {
     return { address, requests, requestCount }; // ES2015 syntax for address:address
   }
   render() {
+    // L203: use ES2015 destructuring to shorten the process of creating table tags
+    const { Header, Row, HeaderCell, Body } = Table;
+
     return (
       <Layout>
         <h3>Requests List</h3>
@@ -44,6 +47,19 @@ class RequestIndex extends Component {
             <Button primary>Add Requests</Button>
           </a>
         </Link>
+        <Table>
+          <Header>
+            <Row>
+              <HeaderCell>ID</HeaderCell>
+              <HeaderCell>Description</HeaderCell>
+              <HeaderCell>Amount</HeaderCell>
+              <HeaderCell>Recipient</HeaderCell>
+              <HeaderCell>Approval Count</HeaderCell>
+              <HeaderCell>Approve</HeaderCell>
+              <HeaderCell>Finalize</HeaderCell>
+            </Row>
+          </Header>
+        </Table>
       </Layout>
     );
   }

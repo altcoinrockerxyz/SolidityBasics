@@ -985,3 +985,10 @@ Returning an Array of Struct is not supported by Solidity, so to be able to stil
 **Lecture 202: The Need for parseInt()**
 
 Issuing a call to retrieve the value of getRequestsCount will return a String, so a parseInt is needed to convert the string into a number before calling the struct into an array function (requests/index.js line 27).
+
+**Lecture 203: Rendering a Table**
+
+Display the list of requests on the screen as a table by:
+
+- Using Semantic UI React > Collections > Table
+- Using ES2015 to shorten process of creating table cell values (requests/index.js lines 39 to 59)

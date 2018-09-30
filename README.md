@@ -1006,3 +1006,8 @@ Use some destructuring for table tags and this.props
 Two values should be shown (number of people who already approved, and total approvers).
 
 Approvers tied to a request is stored inside our _request struct_
+
+**Lecture 207: Approving a Request**
+
+Create An Approve Button using Semantic UI.
+Add a click-event handler that runs a helper function to call this.onApprove (RequestRow.js line 10 to 18)

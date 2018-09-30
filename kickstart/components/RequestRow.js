@@ -1,8 +1,22 @@
 import React, { Component } from "react";
-import { Table } from "semantic-ui-react";
+import { Table, Button } from "semantic-ui-react";
 import web3 from "../ethereum/web3";
+import Campaign from "../ethereum/campaign";
 
 class RequestRow extends Component {
+  // L207: Call approve request based on the index of the caller
+  // There is a need to access the campaign object (contract)
+  // To do that, import campaign and create a campaign instance
+  onApprove = async () => {
+    const campaign = Campaign(this.props.address);
+
+    // get a list of all accounts need for line 16
+    const accounts = await web3.eth.getAccounts();
+    await campaign.methods.approveRequest(this.props.id).send({
+      from: accounts[0]
+    });
+  };
+
   render() {
     // destructure the actual components of the table that we need (row and cell)
     const { Row, Cell } = Table;
@@ -20,6 +34,11 @@ class RequestRow extends Component {
         <Cell>{request.recipient}</Cell>
         <Cell>
           {request.approvalCount} / {approversCount}
+        </Cell>
+        <Cell>
+          <Button color="green" basic onClick={this.onApprove}>
+            Approve
+          </Button>
         </Cell>
       </Row>
     );

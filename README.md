@@ -1042,27 +1042,3 @@ What we've accomplished:
 2.  View Individual Campaigns and get some details about them
 3.  Users can Create, View Requests, and Disperse Money tied to an individual campaign
 4.  Users can easily see the status of each of the Requests
-
-**Lecture 214: Purpose of Boilerplate Projects**
-
-Photo - https://imgur.com/fI1ttKG
-
-Libraries to be used: React.js and Redux.js - JavaScript files with a slightly different syntax of JavaScripts (written in ES6 or ES2016).
-
-Note: No browser has complete support for ES6 yet. (ES5 is Vanilla JavaScript).
-
-For the scripts (codes) to run on a browser, we need to undergo a Tooling or a Transpile step. To Transpile, we need a tool called Webpack, backed by another lib called Babel.js
-
-Their purpose is to take these ES6 codes that can't be run by browsers, and transpile them into something that can be run in browsers.
-
-After running through webpack/babel, a single JS file will be spit out (app.js/application.js/main.js). This new file can be safely run into a browser.
-
-STEPS:
-
-1.  Write our Codes (Project Files)
-2.  Tranpile using Webpack / Babel
-3.  Run inside of browsers
-
-**Lecture 215: Environment Setup**
-
-Step 1: Install the boiler plate application (navigate to github.com/StephenGrider > ReduxSimpleStarter)
